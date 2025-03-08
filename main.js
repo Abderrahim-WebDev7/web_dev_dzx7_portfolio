@@ -125,3 +125,23 @@ document.getElementById('projects').addEventListener('click', function() {
 document.getElementById('contact').addEventListener('click', function() {
     smoothScroll('contactSec'); 
 });
+
+document.getElementById('home2').addEventListener('click', function() {
+    smoothScroll('homeSec'); 
+});
+
+document.getElementById('about2').addEventListener('click', function() {
+    smoothScroll('abourSec', 160);
+});
+
+document.getElementById('skills2').addEventListener('click', function() {
+    smoothScroll('skillsSec', 160); 
+});
+
+document.getElementById('projects2').addEventListener('click', function() {
+    smoothScroll('projectSec', 160); 
+});
+
+document.getElementById('contact2').addEventListener('click', function() {
+    smoothScroll('contactSec'); 
+});
