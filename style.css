@@ -1,0 +1,2764 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+    background-color: #181a1b;
+    width: 100%;
+    height: max-content;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(133, 76, 230);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: #181a1b;
+}
+header{
+    height: 80px;
+    width: 100%;
+    border-bottom: 1px solid #181a1b;
+    z-index: 999;
+    position: fixed;
+    background-color: #181a1b;
+    transition: 0.6s;
+}
+nav{
+    height: 100%;
+    width: 80%;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 10%;
+}
+nav h1{
+    color: white;
+    position: absolute;
+    top: 20px;
+    cursor: pointer;
+}
+nav h1 span{
+    color: rgb(133, 76, 230);
+}
+nav ul{
+    list-style: none;
+    justify-content: space-around;
+    display: flex;
+    width: 50%;
+    position: absolute;
+    top: 20px;
+    left: 25%;
+}
+nav ul li{
+    color: white;
+    font-size: 22px;
+    cursor: pointer;transition: 0.4s;
+}
+nav ul li:hover{
+    color: rgb(133, 76, 230);
+}
+#navGitLing{
+    border: 1px solid rgb(133, 76, 230);
+    color: rgb(133, 76, 230);
+    align-items: center;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: 0.6s ease-in-out;
+    text-decoration: none;
+    height: 44px;
+    position: absolute;
+    left: 85%;
+    top: 12px;
+}
+#navGitLing:hover{
+    background-color: rgb(133, 76, 230);
+    color: white;
+}
+
+#homeSec{
+    width: 80%;
+    height: max-content;
+}
+.allHome{
+    display: flex;
+    justify-content: space-between;
+}
+.homeOne, .homeTwo{
+    width: 45%;
+    height: 500px;
+}
+.homeimg{
+    border-radius: 50%;
+    border: 2px solid rgb(133, 76, 230);
+    height: 50%;
+    position: relative;
+    top: 25%;
+    left: 50%;
+    animation: homeimg 5s infinite;
+    cursor: pointer;
+}
+@keyframes homeimg{
+    0%{
+        top: 190px;
+    }
+    50%{
+        top: 300px;
+    }
+    100%{
+        top: 190px;
+    }
+}
+.homeOne h1{
+    position: relative;
+    top: 40%;
+    left: 30%;
+    color: white;
+    font-size: 34px;
+    cursor: pointer;
+}
+.homeOne h1 span,.homeOne h3 span{
+    color: rgb(133, 76, 230);
+}
+.homeOne h2{
+    position: relative;
+    top: 44%;
+    left: 30%;
+    color: white;
+    font-size: 32px;
+    text-shadow: 2px 8px 8px rgb(12, 11, 11);
+    cursor: pointer;
+    color: rgb(133, 76, 230);
+}
+.homeOne h3{
+    position: relative;
+    top: 48%;
+    left: 30%;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+
+
+#abourSec{
+    width: 100%;
+    position: absolute;
+    top: 80%;
+}
+.aboutTitle{
+    text-align: center;
+    font-size: 32px;
+    color: white;
+}
+.aboutTitle span{
+    color: rgb(133, 76, 230);
+}
+.aboutDes{
+    text-align: center;
+    color: white;
+    margin-top: 18px;
+}
+.aboutCarts{
+    display: flex;
+    justify-content: space-around;
+    height: max-content;
+    width: 20%;
+    position: relative;
+    left: 40%;
+    margin-top: 22px;
+}
+.aboutCartsOne,.aboutCartsTwo{
+    width: 47%;
+}
+.aboutCartsTwo{
+    left: 0;
+}
+.aboutCartsOne{
+    right: 0;
+}
+.aboutCart{
+    background-color: #222a35;
+    height: 120px;
+    width: 100%;
+    border: 2px solid rgb(133, 76, 230);
+    margin-top: 12px;
+    border-top-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+.aboutCart2{
+    background-color: #222a35;
+    height: 120px;
+    width: 100%;
+    border: 2px solid rgb(133, 76, 230);
+    margin-top: 12px;
+    border-top-right-radius: 18px;
+    border-bottom-left-radius: 18px;
+}
+.aboutCart,.aboutCart2{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.aboutCart h2,.aboutCart h3,.aboutCart2 h2,.aboutCart2 h3{
+    width: 100%;
+    text-align: center;
+}
+.aboutCart h2,.aboutCart2 h2{
+    font-size: 38px;
+    color: rgb(133, 76, 230);
+    margin-top: 8px;
+    animation: about infinite 4s;
+}
+.aboutCart h3,.aboutCart2 h3{
+    font-size: 20px;
+    color: white;
+}
+@keyframes about{
+    0%{
+        text-shadow: 2px 8px 8px rgb(133, 76, 230);
+    }
+    50%{
+        text-shadow: 2px 8px 8px rgba(132, 76, 230, 0);
+    }
+    100%{
+        text-shadow: 2px 8px 8px rgb(133, 76, 230);
+    }
+}
+
+
+
+
+#skillsSec{
+    width: 100%;
+    position: absolute;
+    top: 140%;
+}
+.skillsTitle{
+    text-align: center;
+    font-size: 32px;
+    color: rgb(133, 76, 230);
+}
+.skillsDes{
+    text-align: center;
+    color: white;
+}
+.allBoxes{
+    display: flex;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 70%;
+    left: 15%;
+    position: relative;
+}
+.box{
+    width: 46%;
+    height: max-content;
+    border: 1px solid rgb(133, 76, 230);
+    background-color: #222a35;
+    padding: 8px;
+    border-radius: 18px;
+    margin-top: 20px;
+    box-shadow: 2px 4px 20px rgb(133, 76, 230);
+    transition: 0.4s;
+    cursor: pointer;
+}
+.box3{
+    width: 90%;
+    height: max-content;
+    border: 1px solid rgb(133, 76, 230);
+    background-color: #222a35;
+    padding: 8px;
+    border-radius: 18px;
+    margin-top: 20px;
+    box-shadow: 2px 4px 20px rgb(133, 76, 230);
+    transition: 0.4s;
+    cursor: pointer;
+}
+.box:hover,.box3:hover{
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);
+}
+.allBoxes{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.box h2,.box3 h2{
+    text-align: center;
+    color: white;
+}
+.Sb{
+    border: 1px solid rgb(133, 76, 230);
+    padding: 8px;
+    border-radius: 8px;
+    background-color: rgb(133, 76, 230);
+    margin-top: 12px;
+}
+.Sb svg{
+    height: 40px;
+    width: 40px;
+}
+.Sb label{
+    font-size: 20px;
+}
+
+
+
+
+
+#projectSec{
+    position: absolute;
+    top: 240%;
+    width: 100%;
+}
+.projectTitle{
+    text-align: center;
+    font-size: 32px;
+    color: rgb(133, 76, 230);
+}
+.projectDes{
+    text-align: center;
+    color: white;
+    margin-top: 12px;
+}
+.carts{
+    width: 60%;
+    position: relative;
+    left: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 24px;
+}
+.cart{
+    width: 32%;
+    height: max-content;
+    padding-bottom: 24px;
+    overflow: hidden;
+    margin-top: 20px;
+    background-color: #222a35;
+    border-radius: 12px;
+    transition: 0.4s;
+    border: 2px solid #181a1b;
+}
+.cart:hover{
+    transform: scale(1.03);
+    margin-top: 10px;
+}
+.vidDiv{
+    width: 90%;
+    height: 220px;
+    position: relative;
+    left: 5%;
+    top: 10px;
+    margin-bottom: 16px;
+}
+.vidDiv video{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border-radius: 8px;
+    transition: 0.4s;
+}
+.freamworks{
+    height: max-content;
+    width: 90%;
+    position: relative;
+    left: 5%;
+    padding: 8px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.freamworks h3{
+    display: block;
+    background-color: none;
+    color: rgb(133, 76, 230);
+    border: 1px solid rgb(133, 76, 230);
+    border-radius: 12px;
+    padding: 6px;
+    font-size: 16px;
+    margin-top: 6px;
+    background-color: rgba(132, 76, 230, 0.089);
+    cursor: pointer;
+}
+.vidTitle{
+    text-align: center;
+    color: rgb(133, 76, 230);
+    font-size: 28px;
+    margin-top: 8px;
+    cursor: pointer;
+}
+.vidDes{
+    text-align: center;
+    color: white;
+    margin: 12px 12px 0px 12px;
+    cursor: pointer;
+}
+.vidDate{
+    position: relative;
+    left: 12px;
+    top: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+#contactSec{
+    position: absolute;
+    top: 430%;
+    width: 100%;
+}
+.SoMedia svg{
+    height: 30px;
+    width: 30px;
+    color: white;
+}
+.SoMedia a{
+    text-decoration: none;
+    color: white;
+}
+.contactTitle{
+    text-align: center;
+    font-size: 32px;
+    color: white;
+}
+.contactTitle span{
+    color: rgb(133, 76, 230);
+}
+.contacts{
+    width: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    height: max-content;
+    position: relative;
+    left: 40%;
+}
+.cont{
+    width: 100%;
+    background-color: #222a35;
+    border: 2px solid rgb(133, 76, 230);
+    border-radius: 50px;
+    height: 60px;
+    margin-top: 10px;
+}
+.cont svg{
+    position: relative;
+    height: 30px;
+    width: 30px;
+    top: 16px;
+    left: 16px;
+}
+.cont h2{
+    color: white;
+    text-align: center;
+    position: relative;
+    bottom: 20px;
+    left: 20px;
+}
+.sm{
+    width: 40%;
+    position: relative;
+    left: 30%;
+    margin-top: 30px;
+}
+.smTitle{
+    text-align: center;
+    font-size: 28px;
+    color: white;
+}
+.SoMedia{
+    width: 20%;
+    flex-wrap: wrap;
+    position: relative;
+    left: 40%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 16px;
+}
+.SoMedia svg{
+    transition: 0.4s;
+    margin-top: 8px;
+}
+.SoMedia svg:hover{
+    color: rgb(133, 76, 230);
+    transform: scale(1.3);
+}
+
+footer{
+    position: absolute;
+    top: 480%;
+    background-color: #121414;
+    width: 100%;
+    border-top: 1px solid rgb(133, 76, 230);
+    height: 180px;
+}
+.footerTitle{
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+}
+footer ul{
+    list-style: none;
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    left: 35%;
+    top: 20px;
+}
+footer ul li{
+    font-size: 22px;
+    transition: 0.4s;
+    cursor: pointer;
+    color: white;
+}
+footer ul li:hover{
+    color: rgb(133, 76, 230);
+}
+.copir{
+    text-align: center;
+    margin-top: 66px;
+    color: white;
+}
+.copir span{
+    color: rgb(133, 76, 230);
+}
+footer svg{
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    transition: 0.4s;
+    cursor: pointer;
+    background-color: rgba(118, 63, 212, 0.116);
+    color: rgb(133, 76, 230);
+    border: 2px solid rgb(133, 76, 230);
+    border-radius: 50px;
+}
+footer svg:hover{
+    transform: rotate(360deg);
+}
+h1,h2,h3{
+    cursor: pointer;
+}
+.cont svg{
+    color: rgb(133, 76, 230);
+}
+.smTitle span{
+    color: rgb(133, 76, 230);
+}
+#upArrow{
+    display: none;
+    transition: 0.4s;
+}
+#navList,#navClose,#navGitHub{
+    display: none;
+}
+@media only screen and (min-width: 1451) and (max-width: 1600px) {
+    #contactSec {
+        top: 480%;
+    }
+}
+@media only screen and (min-width: 1337px) and (max-width: 1450px) {
+    #contactSec {
+        top: 450%;
+    }
+    #footer {
+        top: 510%;
+    }
+}
+@media only screen and (min-width: 1128px) and (max-width: 1387px) {
+    #cont1 {
+        width: 40%;
+        left: 30%;
+    }
+}
+
+@media only screen and (max-width: 1127px), (min-width: 1388px) {
+    #cont1 {
+        width: ; 
+        left: ;  
+    }
+}
+@media only screen and (min-width :1127px) and (max-width :1337px){
+    #navGitLing{
+        text-align: center;
+        padding-top: 2px;
+    }
+    #projectSec{
+        top: 260%;
+    }
+    .carts{
+        width: 90%;
+        left: 5%;
+    }
+    #contactSec{
+        top: 460%;
+    }
+    footer{
+        top: 520%;
+    }
+    .SoMedia{
+        width: 25%;
+        left: 37.5%;
+    }
+}
+@media only screen and (min-width :967px) and (max-width :1127px){
+    #navGitLing{
+        text-align: center;
+        padding-top: 2px;
+    }
+    #projectSec{
+        top: 240%;
+    }
+    .carts{
+        width: 90%;
+        left: 5%;
+    }
+    #contactSec{
+        top: 440%;
+    }
+    footer{
+        top: 500%;
+    }
+    .SoMedia{
+        width: 30%;
+        left: 35%;
+    }
+    .aboutCarts{
+        width: 30%;
+        left: 35%;
+    }
+    .allBoxes{
+        width: 94%;
+        left: 3%;
+    }
+    .contacts{
+        width: 30%;
+        left: 35%;
+    }
+    .vidDiv{
+        top: 10px;
+    }
+}
+@media only screen and (min-width :744px) and (max-width :967px){
+    #navGitLing{
+        text-align: center;
+        padding-top: 2px;
+        height: max-content;
+    }
+    #projectSec{
+        top: 240%;
+    }
+    .carts{
+        width: 90%;
+        left: 5%;
+    }
+    #contactSec{
+        top: 430%;
+    }
+    footer{
+        top: 480%;
+    }
+    .SoMedia{
+        width: 40%;
+        left: 30%;
+    }
+    .aboutCarts{
+        width: 40%;
+        left: 30%;
+    }
+    .allBoxes{
+        width: 94%;
+        left: 3%;
+    }
+    .contacts{
+        width: 40%;
+        left: 30%;
+    }
+    #nav{
+        width: 94%;
+        left: 3%;
+    }
+    #nav h1{
+        font-size: 22px;
+        left: 0%;
+    }
+    #nav ul{
+        left: 28%;
+    }
+    #nav ul li{
+        font-size: 20px;
+    }
+    #navGitLing{
+        right: 0%;
+    }
+    .homeOne h1{
+        font-size: 24px;
+    }
+    .homeOne h2{
+        font-size: 26px;
+    }
+    .homeOne h3{
+        font-size: 20px;
+    }
+    .aboutTitle,.projectTitle,.skillsTitle,.contactTitle{
+        font-size: 26px;
+    }
+    .aboutDes,.projectDes,.skillsDes{
+        font-size: 22px;
+        padding: 0 20px 0 20px;
+    }
+    .cont h2,.smTitle{
+        font-size: 22px;
+    }
+    .footerTitle{
+        font-size: 26px;
+    } 
+    footer ul{
+        width: 60%;
+        left: 20%;
+    }
+    .box h2,.box3 h2{
+        font-size: 22px;
+    }
+    .vidDiv{
+        position: relative;
+        top: 10px;
+        margin-top: 0;
+        height: max-content;
+    }
+    .freamworks{
+        top: 0;
+        margin-top: -20px;
+    }
+    .Sb{
+        height: 50px;
+    }
+    .Sb svg{
+        margin-top: -4px;
+    }
+    .Sb  label{
+        margin-bottom: 10px;
+    }
+}
+@media only screen and (min-width :669px) and (max-width :744px){
+    #navGitLing{
+        text-align: center;
+        padding-top: 4px;
+        height: max-content;
+        right: 0%;
+        top: 16px;
+        width: 25%;
+        left: 75%;
+        display: none;
+    }
+    #navGitHub{
+        display: block;
+        color: white;
+        transition: 0.4s;
+        position: relative;
+        top: 20px;
+    }
+    #navList{
+        display: block;
+        position: relative;
+        top: 8px;
+        left: 10px;
+        height: 50px;
+        width: 50px;
+        color: white;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+    #navClose{
+        display: none;
+        position: relative;
+        top: 8px;
+        left: 10px;
+        height: 50px;
+        width: 50px;
+        color: rgb(133, 76, 230);
+        cursor: pointer;
+        transition: 0.4s;
+    }
+    #nav{
+        width: 94%;
+        left: 3%;
+    }
+    #nav h1{
+        font-size: 22px;
+        text-align: center;
+        left: 25%;
+        width: 50%;
+    }
+    #nav ul{
+        left: 15%;
+        top: 70px;
+        display: none;
+        width: 70%;
+    }
+    #nav ul li{
+        font-size: 20px;
+    }
+    
+    #header{
+        height: 80px;
+    }
+    #projectSec{
+        top: 240%;
+    }
+    .carts{
+        width: 90%;
+        left: 5%;
+    }
+    #contactSec{
+        top: 500%;
+    }
+    footer{
+        top: 550%;
+    }
+    .SoMedia{
+        width: 40%;
+        left: 30%;
+    }
+    .aboutCarts{
+        width: 40%;
+        left: 30%;
+    }
+    .allBoxes{
+        width: 94%;
+        left: 3%;
+    }
+    .contacts{
+        width: 40%;
+        left: 30%;
+    }
+    .homeOne h1{
+        font-size: 24px;
+    }
+    .homeOne h2{
+        font-size: 26px;
+    }
+    .homeOne h3{
+        font-size: 20px;
+    }
+    .aboutTitle,.projectTitle,.skillsTitle,.contactTitle{
+        font-size: 26px;
+    }
+    .aboutDes,.projectDes,.skillsDes{
+        font-size: 22px;
+        padding: 0 20px 0 20px;
+    }
+    .cont h2,.smTitle{
+        font-size: 22px;
+    }
+    .footerTitle{
+        font-size: 26px;
+    } 
+    footer ul{
+        width: 60%;
+        left: 20%;
+    }
+    .box h2,.box3 h2{
+        font-size: 22px;
+    }
+    .vidDiv{
+        position: relative;
+        top: 10px;
+        margin-top: 0;
+        height: max-content;
+    }
+    .freamworks{
+        top: 0;
+        margin-top: -20px;
+    }
+    .Sb{
+        height: 50px;
+    }
+    .Sb svg{
+        margin-top: -4px;
+        height: 25px;
+        width: 25px;
+    }
+    .Sb  label{
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+    .carts{
+        width: 80%;
+        left: 10%;
+    }
+    .cart{
+        width: 50%;
+    }
+    .vidDes{
+        font-size: 18px;
+    }
+}
+@media only screen and (min-width :550px) and (max-width :669px){
+    #navGitLing{
+        text-align: center;
+        padding-top: 4px;
+        height: max-content;
+        right: 0%;
+        top: 16px;
+        width: 25%;
+        left: 75%;
+        display: none;
+    }
+    #navGitHub{
+        display: block;
+        color: white;
+        transition: 0.4s;
+        position: relative;
+        top: 20px;
+    }
+    #navList{
+        display: block;
+        position: relative;
+        top: 8px;
+        left: 10px;
+        height: 50px;
+        width: 50px;
+        color: white;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+    #navClose{
+        display: none;
+        position: relative;
+        top: 8px;
+        left: 10px;
+        height: 50px;
+        width: 50px;
+        color: rgb(133, 76, 230);
+        cursor: pointer;
+        transition: 0.4s;
+    }
+    #nav{
+        width: 94%;
+        left: 3%;
+    }
+    #nav h1{
+        font-size: 22px;
+        text-align: center;
+        left: 25%;
+        width: 50%;
+    }
+    #nav ul{
+        left: 15%;
+        top: 70px;
+        display: none;
+        width: 70%;
+    }
+    #nav ul li{
+        font-size: 20px;
+    }
+    
+    #header{
+        height: 80px;
+    }
+    #projectSec{
+        top: 240%;
+    }
+    .carts{
+        width: 90%;
+        left: 5%;
+    }
+    #contactSec{
+        top: 510%;
+    }
+    footer{
+        top: 560%;
+        height: max-content;
+    }
+    .homeimg{
+        height: 200px;
+        width: 200px;
+    }
+    .SoMedia{
+        width: 50%;
+        left: 25%;
+    }
+    .aboutCarts{
+        width: 50%;
+        left: 25%;
+    }
+    .allBoxes{
+        width: 94%;
+        left: 3%;
+    }
+    .contacts{
+        width: 50%;
+        left: 25%;
+    }
+    .homeOne h1{
+        font-size: 24px;
+    }
+    .homeOne h2{
+        font-size: 26px;
+    }
+    .homeOne h3{
+        font-size: 20px;
+    }
+    .aboutTitle,.projectTitle,.skillsTitle,.contactTitle{
+        font-size: 26px;
+    }
+    .aboutDes,.projectDes,.skillsDes{
+        font-size: 22px;
+        padding: 0 20px 0 20px;
+    }
+    .cont h2,.smTitle{
+        font-size: 22px;
+    }
+    .footerTitle{
+        font-size: 26px;
+    } 
+    footer ul{
+        width: 60%;
+        left: 20%;
+    }
+    .box h2,.box3 h2{
+        font-size: 22px;
+    }
+    .vidDiv{
+        position: relative;
+        top: 10px;
+        margin-top: 0;
+        height: max-content;
+    }
+    .freamworks{
+        top: 0;
+        margin-top: -20px;
+    }
+    .Sb{
+        height: 40px;
+    }
+    .Sb svg{
+        margin-top: -4px;
+        height: 22px;
+        width: 22px;
+    }
+    .Sb  label{
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    .carts{
+        width: 80%;
+        left: 10%;
+    }
+    .cart{
+        width: 50%;
+    }
+    .vidDes{
+        font-size: 18px;
+    }
+    .aboutCart h2,.aboutCart2 h2{
+        font-size: 32px;
+    }
+    .aboutCart h3,.aboutCart2 h3{
+        font-size: 20px;
+    }
+    .copir{
+        padding-bottom: 16px;
+    }
+}
+@media only screen and (min-width :447px) and (max-width :550px){
+    #navGitLing{
+        text-align: center;
+        padding-top: 4px;
+        height: max-content;
+        right: 0%;
+        top: 16px;
+        width: 25%;
+        left: 75%;
+        display: none;
+    }
+    #navGitHub{
+        display: block;
+        color: white;
+        transition: 0.4s;
+        position: relative;
+        top: 20px;
+    }
+    #navList{
+        display: block;
+        position: relative;
+        top: 8px;
+        left: 10px;
+        height: 50px;
+        width: 50px;
+        color: white;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+    #navClose{
+        display: none;
+        position: relative;
+        top: 8px;
+        left: 10px;
+        height: 50px;
+        width: 50px;
+        color: rgb(133, 76, 230);
+        cursor: pointer;
+        transition: 0.4s;
+    }
+    #nav{
+        width: 94%;
+        left: 3%;
+    }
+    #nav h1{
+        font-size: 22px;
+        text-align: center;
+        left: 25%;
+        width: 50%;
+    }
+    #nav ul{
+        left: 15%;
+        top: 70px;
+        display: none;
+        width: 70%;
+    }
+    #nav ul li{
+        font-size: 20px;
+    }
+    
+    #header{
+        height: 80px;
+    }
+    #projectSec{
+        top: 240%;
+    }
+    .carts{
+        width: 96%;
+        left: 2%;
+    }
+    .cart{
+        width: 49%;
+    }
+    #contactSec{
+        top: 490%;
+    }
+    footer{
+        top: 550%;
+        height: max-content;
+    }
+    .homeimg{
+        height: 200px;
+        width: 200px;
+        position: relative;
+        left: 30%;
+    }
+    .SoMedia{
+        width: 60%;
+        left: 20%;
+    }
+    .aboutCarts{
+        width: 50%;
+        left: 25%;
+    }
+    .allBoxes{
+        width: 94%;
+        left: 3%;
+    }
+    .contacts{
+        width: 60%;
+        left: 20%;
+    }
+    .homeOne h1{
+        font-size: 24px;
+    }
+    .homeOne h2{
+        font-size: 26px;
+    }
+    .homeOne h3{
+        font-size: 20px;
+    }
+    .aboutTitle,.projectTitle,.skillsTitle,.contactTitle{
+        font-size: 26px;
+    }
+    .aboutDes,.projectDes,.skillsDes{
+        font-size: 22px;
+        padding: 0 20px 0 20px;
+    }
+    .cont h2,.smTitle{
+        font-size: 22px;
+    }
+    .footerTitle{
+        font-size: 26px;
+    } 
+    footer ul{
+        width: 90%;
+        left: 05%;
+    }
+    .box h2,.box3 h2{
+        font-size: 22px;
+    }
+    .vidDiv{
+        position: relative;
+        top: 0px;
+        left: 0;
+        margin-top: 0;
+        height: 100%;
+        width: 100%;
+    }
+    .video{
+        width: 100%;
+        height: 100%;
+    }
+    .freamworks{
+        top: 0;
+        margin-top: -20px;
+    }
+    .freamworks h3{
+        font-size: 10px;
+    }
+    .Sb{
+        height: 40px;
+    }
+    .Sb svg{
+        margin-top: -4px;
+        height: 22px;
+        width: 22px;
+    }
+    .Sb  label{
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    .vidDes{
+        font-size: 18px;
+    }
+    .aboutCart h2,.aboutCart2 h2{
+        font-size: 32px;
+    }
+    .aboutCart h3,.aboutCart2 h3{
+        font-size: 20px;
+    }
+    .copir{
+        padding-bottom: 16px;
+    }
+    .vidTitle{
+        font-size: 24px;
+    }
+    .vidDes,.vidDate{
+        font-size: 16px;
+    }
+}
+@media only screen and (min-width :433px) and (max-width :479px){
+    #navGitLing{
+        text-align: center;
+        padding-top: 4px;
+        height: max-content;
+        right: 0%;
+        top: 16px;
+        width: 25%;
+        left: 75%;
+        display: none;
+    }
+    #navGitHub{
+        display: block;
+        color: white;
+        transition: 0.4s;
+        position: relative;
+        top: 20px;
+    }
+    #navList{
+        display: block;
+        position: relative;
+        top: 8px;
+        left: 10px;
+        height: 50px;
+        width: 50px;
+        color: white;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+    #navClose{
+        display: none;
+        position: relative;
+        top: 8px;
+        left: 10px;
+        height: 50px;
+        width: 50px;
+        color: rgb(133, 76, 230);
+        cursor: pointer;
+        transition: 0.4s;
+    }
+    #nav{
+        width: 94%;
+        left: 3%;
+    }
+    #nav h1{
+        font-size: 20px;
+        text-align: center;
+        left: 25%;
+        width: 50%;
+    }
+    #nav ul{
+        left: 05%;
+        top: 70px;
+        display: none;
+        width: 90%;
+    }
+    #nav ul li{
+        font-size: 18px;
+    }
+    
+    #header{
+        height: 80px;
+    }
+    #projectSec{
+        top: 240%;
+    }
+    .carts{
+        width: 96%;
+        left: 2%;
+    }
+    .cart{
+        width: 49%;
+    }
+    #contactSec{
+        top: 500%;
+    }
+    footer{
+        top: 550%;
+        height: max-content;
+    }
+    .homeimg{
+        height: 170px;
+        width: 170px;
+        position: relative;
+        left: 30%;
+    }
+    .SoMedia{
+        width: 60%;
+        left: 20%;
+    }
+    .aboutCarts{
+        width: 60%;
+        left: 20%;
+    }
+    .box,.box3{
+        width: 100%;
+        height: max-content;
+    }
+    .allBoxes{
+        width: 94%;
+        left: 3%;
+    }
+    .contacts{
+        width: 70%;
+        left: 15%;
+    }
+    .homeOne h1{
+        font-size: 24px;
+    }
+    .homeOne h2{
+        font-size: 26px;
+    }
+    .homeOne h3{
+        font-size: 20px;
+    }
+    .aboutTitle,.projectTitle,.skillsTitle,.contactTitle{
+        font-size: 26px;
+    }
+    .aboutDes,.projectDes,.skillsDes{
+        font-size: 22px;
+        padding: 0 20px 0 20px;
+    }
+    .cont h2,.smTitle{
+        font-size: 22px;
+    }
+    .footerTitle{
+        font-size: 26px;
+    } 
+    footer ul{
+        width: 90%;
+        left: 05%;
+    }
+    .box h2,.box3 h2{
+        font-size: 22px;
+    }
+    .vidDiv{
+        position: relative;
+        top: 0px;
+        left: 0;
+        margin-top: 0;
+        height: 100%;
+        width: 100%;
+    }
+    .video{
+        width: 100%;
+        height: 100%;
+    }
+    .freamworks{
+        top: 0;
+        margin-top: -20px;
+    }
+    .freamworks h3{
+        font-size: 10px;
+    }
+    .Sb{
+        height: 40px;
+    }
+    .Sb svg{
+        margin-top: -4px;
+        height: 22px;
+        width: 22px;
+    }
+    .Sb  label{
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    .vidDes{
+        font-size: 18px;
+    }
+    .aboutCart h2,.aboutCart2 h2{
+        font-size: 32px;
+    }
+    .aboutCart h3,.aboutCart2 h3{
+        font-size: 20px;
+    }
+    .copir{
+        padding-bottom: 16px;
+        font-size: 20px;
+        padding: 0 12px 12px 12px;
+    }
+    .vidTitle{
+        font-size: 24px;
+    }
+    .vidDes,.vidDate{
+        font-size: 16px;
+    }
+}
+@media only screen and (min-width :384px) and (max-width :433px){
+    #navGitLing{
+        text-align: center;
+        padding-top: 4px;
+        height: max-content;
+        right: 0%;
+        top: 16px;
+        width: 25%;
+        left: 75%;
+        display: none;
+    }
+    #navGitHub{
+        display: block;
+        color: white;
+        transition: 0.4s;
+        position: relative;
+        top: 20px;
+    }
+    #navList{
+        display: block;
+        position: relative;
+        top: 12px;
+        left: 6px;
+        height: 40px;
+        width: 40px;
+        color: white;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+    #navClose{
+        display: none;
+        position: relative;
+        top: 12px;
+        left: 6px;
+        height: 40px;
+        width: 40px;
+        color: rgb(133, 76, 230);
+        cursor: pointer;
+        transition: 0.4s;
+    }
+    #nav{
+        width: 94%;
+        left: 3%;
+    }
+    #nav h1{
+        font-size: 20px;
+        text-align: center;
+        left: 25%;
+        width: 50%;
+    }
+    #nav ul{
+        left: 02%;
+        top: 70px;
+        display: none;
+        width: 98%;
+    }
+    #nav ul li{
+        font-size: 18px;
+    }
+    
+    #header{
+        height: 80px;
+    }
+    #projectSec{
+        top: 250%;
+    }
+    .carts{
+        width: 96%;
+        left: 2%;
+    }
+    .cart{
+        width: 49%;
+    }
+    #contactSec{
+        top: 500%;
+    }
+    .cont h2{
+        font-size: 16px;
+    }
+    footer{
+        top: 550%;
+        height: max-content;
+    }
+    #homeSec{
+        width: 100%;
+        overflow: hidden;
+    }
+    .allHome{
+        width: 100%;
+        overflow: hidden;
+        display: block;
+    }
+    .homeTwo{
+        width: 100%;
+        left: 0;
+        position: absolute;
+        left: 0%;
+        top: 0%;
+    }
+    .homeOne{
+        z-index: 1;
+        width: 100%;
+        left: 0;
+        position: relative;
+        left: 0;
+    }
+    .homeOne h1,.homeOne h2,.homeOne h3{
+        left: 0;
+        padding: 0 20px 0 20px;
+        text-align: center;
+    }
+    .homeimg{
+        height: 170px;
+        width: 170px;
+        position: absolute;
+        left: 6%;
+        top: 0%;
+        filter: blur(6px);
+        margin: 0 25% 0 25%;
+    }
+    .SoMedia{
+        width: 60%;
+        left: 20%;
+    }
+    .aboutCarts{
+        width: 80%;
+        left: 10%;
+    }
+    .box,.box3{
+        width: 100%;
+        height: max-content;
+    }
+    .allBoxes{
+        width: 94%;
+        left: 3%;
+    }
+    .contacts{
+        width: 70%;
+        left: 15%;
+    }
+    .homeOne h1{
+        font-size: 24px;
+    }
+    .homeOne h2{
+        font-size: 26px;
+    }
+    .homeOne h3{
+        font-size: 20px;
+    }
+    .aboutTitle,.projectTitle,.skillsTitle,.contactTitle{
+        font-size: 26px;
+    }
+    .aboutDes,.projectDes,.skillsDes{
+        font-size: 22px;
+        padding: 0 20px 0 20px;
+    }
+    .cont h2{
+        font-size: 18px;
+    }
+    .smTitle{
+        font-size: 20px;
+    }
+    .footerTitle{
+        font-size: 26px;
+    } 
+    footer ul{
+        width: 90%;
+        left: 05%;
+    }
+    .box h2,.box3 h2{
+        font-size: 22px;
+    }
+    .vidDiv{
+        position: relative;
+        top: 0px;
+        left: 0;
+        margin-top: 0;
+        height: 100%;
+        width: 100%;
+    }
+    .video{
+        width: 100%;
+        height: 100%;
+    }
+    .freamworks{
+        top: 0;
+        margin-top: -20px;
+    }
+    .freamworks h3{
+        font-size: 10px;
+        margin-top: 2px;
+    }
+    .Sb{
+        height: 40px;
+    }
+    .Sb svg{
+        margin-top: -4px;
+        height: 22px;
+        width: 22px;
+    }
+    .Sb  label{
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    .vidDes{
+        font-size: 18px;
+    }
+    .aboutCart h2,.aboutCart2 h2{
+        font-size: 32px;
+    }
+    .aboutCart h3,.aboutCart2 h3{
+        font-size: 20px;
+    }
+    .copir{
+        padding-bottom: 16px;
+        font-size: 20px;
+        padding: 0 12px 12px 12px;
+    }
+    .vidTitle{
+        font-size: 24px;
+        margin: 0;
+    }
+    .vidDes,.vidDate{
+        font-size: 16px;
+        margin: 0;
+    }
+    .vidDes{
+        padding: 0 3px 0 3px;
+    }
+}
+@media only screen and (min-width :354px) and (max-width :384px){
+    #navGitLing{
+        text-align: center;
+        padding-top: 4px;
+        height: max-content;
+        right: 0%;
+        top: 16px;
+        width: 25%;
+        left: 75%;
+        display: none;
+    }
+    #navGitHub{
+        display: block;
+        color: white;
+        transition: 0.4s;
+        position: relative;
+        top: 20px;
+    }
+    #navList{
+        display: block;
+        position: relative;
+        top: 12px;
+        left: 6px;
+        height: 40px;
+        width: 40px;
+        color: white;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+    #navClose{
+        display: none;
+        position: relative;
+        top: 12px;
+        left: 6px;
+        height: 40px;
+        width: 40px;
+        color: rgb(133, 76, 230);
+        cursor: pointer;
+        transition: 0.4s;
+    }
+    #nav{
+        width: 94%;
+        left: 3%;
+    }
+    #nav h1{
+        font-size: 20px;
+        text-align: center;
+        left: 25%;
+        width: 50%;
+    }
+    #nav ul{
+        left: 02%;
+        top: 70px;
+        display: none;
+        width: 98%;
+    }
+    #nav ul li{
+        font-size: 18px;
+    }
+    
+    #header{
+        height: 80px;
+    }
+    #projectSec{
+        top: 250%;
+    }
+    .carts{
+        width: 96%;
+        left: 2%;
+    }
+    .cart{
+        width: 49%;
+    }
+    #contactSec{
+        top: 470%;
+    }
+    .cont h2{
+        font-size: 16px;
+    }
+    footer{
+        top: 517%;
+        height: max-content;
+    }
+    #homeSec{
+        width: 100%;
+        overflow: hidden;
+    }
+    .allHome{
+        width: 100%;
+        overflow: hidden;
+        display: block;
+    }
+    .homeTwo{
+        width: 100%;
+        left: 0;
+        position: absolute;
+        left: 0%;
+        top: 0%;
+    }
+    .homeOne{
+        z-index: 1;
+        width: 100%;
+        left: 0;
+        position: relative;
+        left: 0;
+    }
+    .homeOne h1,.homeOne h2,.homeOne h3{
+        left: 0;
+        padding: 0 20px 0 20px;
+        text-align: center;
+    }
+    .homeimg{
+        height: 170px;
+        width: 170px;
+        position: absolute;
+        left: 6%;
+        top: 0%;
+        filter: blur(6px);
+        margin: 0 25% 0 25%;
+    }
+    .SoMedia{
+        width: 60%;
+        left: 20%;
+    }
+    .aboutCarts{
+        width: 80%;
+        left: 10%;
+    }
+    .box,.box3{
+        width: 100%;
+        height: max-content;
+    }
+    .allBoxes{
+        width: 94%;
+        left: 3%;
+    }
+    .contacts{
+        width: 70%;
+        left: 15%;
+    }
+    .homeOne h1{
+        font-size: 24px;
+    }
+    .homeOne h2{
+        font-size: 26px;
+    }
+    .homeOne h3{
+        font-size: 20px;
+    }
+    .aboutTitle,.projectTitle,.skillsTitle,.contactTitle{
+        font-size: 26px;
+    }
+    .aboutDes,.projectDes,.skillsDes{
+        font-size: 22px;
+        padding: 0 20px 0 20px;
+    }
+    .cont h2{
+        font-size: 18px;
+    }
+    .smTitle{
+        font-size: 20px;
+    }
+    .footerTitle{
+        font-size: 26px;
+    } 
+    footer ul{
+        width: 90%;
+        left: 05%;
+    }
+    .box h2,.box3 h2{
+        font-size: 22px;
+    }
+    .vidDiv{
+        position: relative;
+        top: 0px;
+        left: 0;
+        margin-top: 0;
+        height: 100%;
+        width: 100%;
+    }
+    .video{
+        width: 100%;
+        height: 100%;
+    }
+    .freamworks{
+        top: 0;
+        margin-top: -20px;
+    }
+    .freamworks h3{
+        font-size: 10px;
+        margin-top: 2px;
+    }
+    .Sb{
+        height: 40px;
+    }
+    .Sb svg{
+        margin-top: -4px;
+        height: 22px;
+        width: 22px;
+    }
+    .Sb  label{
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    .aboutCart h2,.aboutCart2 h2{
+        font-size: 32px;
+    }
+    .aboutCart h3,.aboutCart2 h3{
+        font-size: 20px;
+    }
+    .copir{
+        padding-bottom: 16px;
+        font-size: 20px;
+        padding: 0 12px 12px 12px;
+    }
+    .vidTitle{
+        font-size: 18px;
+        margin: 0;
+    }
+    .vidDes,.vidDate{
+        font-size: 12px;
+        margin: 0;
+    }
+    .vidDes{
+        padding: 0 3px 0 3px;
+        font-size: 12px;
+    }
+    .projectTitle,.contactTitle,.skillsTitle,.aboutTitle{
+        font-size: 20px;
+    }
+    .aboutDes,.skillsDes,.projectDes{
+        font-size: 18px;
+    }
+    .homeOne h1{
+        font-size: 20px;
+    }
+    .homeOne h2{
+        font-size: 18px;
+    }
+    .homeOne h3{
+        font-size: 16px;
+    }
+    .aboutCart h2,.aboutCart2 h2{
+        font-size: 28px;
+    }
+    .aboutCart h3,.aboutCart2 h3{
+        font-size: 18px;
+    }
+    .Sb svg{
+        height: 20px;
+        width: 20px;
+    }
+    .SoMedia svg{
+        height: 20px;
+        width: 20px;
+    }
+}
+@media only screen and (min-width :320px) and (max-width :354px){
+    footer ul li{
+        font-size: 16px;
+    }
+    #navGitLing{
+        text-align: center;
+        padding-top: 4px;
+        height: max-content;
+        right: 0%;
+        top: 16px;
+        width: 25%;
+        left: 75%;
+        display: none;
+    }
+    #navGitHub{
+        display: block;
+        color: white;
+        transition: 0.4s;
+        position: relative;
+        top: 20px;
+    }
+    #navList{
+        display: block;
+        position: relative;
+        top: 12px;
+        left: 6px;
+        height: 40px;
+        width: 40px;
+        color: white;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+    #navClose{
+        display: none;
+        position: relative;
+        top: 12px;
+        left: 6px;
+        height: 40px;
+        width: 40px;
+        color: rgb(133, 76, 230);
+        cursor: pointer;
+        transition: 0.4s;
+    }
+    #nav{
+        width: 94%;
+        left: 3%;
+    }
+    #nav h1{
+        font-size: 18px;
+        text-align: center;
+        left: 25%;
+        width: 50%;
+    }
+    #nav ul{
+        left: 02%;
+        top: 70px;
+        display: none;
+        width: 98%;
+    }
+    #nav ul li{
+        font-size: 18px;
+    }
+    
+    #header{
+        height: 80px;
+    }
+    #projectSec{
+        top: 250%;
+    }
+    .carts{
+        width: 96%;
+        left: 2%;
+    }
+    .cart{
+        width: 49%;
+    }
+    #contactSec{
+        top: 480%;
+    }
+    .cont h2{
+        font-size: 16px;
+    }
+    footer{
+        top: 530%;
+        height: max-content;
+    }
+    #homeSec{
+        width: 100%;
+        overflow: hidden;
+    }
+    .allHome{
+        width: 100%;
+        overflow: hidden;
+        display: block;
+    }
+    .homeTwo{
+        width: 100%;
+        left: 0;
+        position: absolute;
+        left: 0%;
+        top: 0%;
+    }
+    .homeOne{
+        z-index: 1;
+        width: 100%;
+        left: 0;
+        position: relative;
+        left: 0;
+    }
+    .homeOne h1,.homeOne h2,.homeOne h3{
+        left: 0;
+        padding: 0 20px 0 20px;
+        text-align: center;
+    }
+    .homeimg{
+        height: 170px;
+        width: 170px;
+        position: absolute;
+        left: 6%;
+        top: 0%;
+        filter: blur(6px);
+        margin: 0 25% 0 25%;
+    }
+    .SoMedia{
+        width: 60%;
+        left: 20%;
+    }
+    .aboutCarts{
+        width: 80%;
+        left: 10%;
+    }
+    .box,.box3{
+        width: 100%;
+        height: max-content;
+    }
+    .allBoxes{
+        width: 94%;
+        left: 3%;
+    }
+    .contacts{
+        width: 70%;
+        left: 15%;
+    }
+    .homeOne h1{
+        font-size: 24px;
+    }
+    .homeOne h2{
+        font-size: 26px;
+    }
+    .homeOne h3{
+        font-size: 20px;
+    }
+    .aboutTitle,.projectTitle,.skillsTitle,.contactTitle{
+        font-size: 26px;
+    }
+    .aboutDes,.projectDes,.skillsDes{
+        font-size: 22px;
+        padding: 0 20px 0 20px;
+    }
+    .cont h2{
+        font-size: 18px;
+    }
+    .smTitle{
+        font-size: 20px;
+    }
+    .footerTitle{
+        font-size: 26px;
+    } 
+    footer ul{
+        width: 90%;
+        left: 05%;
+    }
+    .box h2,.box3 h2{
+        font-size: 22px;
+    }
+    .vidDiv{
+        position: relative;
+        top: 0px;
+        left: 0;
+        margin-top: 0;
+        height: 100%;
+        width: 100%;
+    }
+    .video{
+        width: 100%;
+        height: 100%;
+    }
+    .freamworks{
+        top: 0;
+        margin-top: -20px;
+        width: 98%;
+        left: 1%;
+    }
+    .freamworks h3{
+        font-size: 10px;
+        margin-top: 2px;
+    }
+    .Sb{
+        height: 40px;
+    }
+    .Sb svg{
+        margin-top: -4px;
+        height: 22px;
+        width: 22px;
+    }
+    .Sb  label{
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    .aboutCart h2,.aboutCart2 h2{
+        font-size: 32px;
+    }
+    .aboutCart h3,.aboutCart2 h3{
+        font-size: 20px;
+    }
+    .copir{
+        padding-bottom: 16px;
+        font-size: 20px;
+        padding: 0 12px 12px 12px;
+    }
+    .vidTitle{
+        font-size: 18px;
+        margin: 0;
+    }
+    .vidDes,.vidDate{
+        font-size: 12px;
+        margin: 0;
+    }
+    .vidDes{
+        padding: 0 3px 0 3px;
+        font-size: 12px;
+    }
+    .projectTitle,.contactTitle,.skillsTitle,.aboutTitle{
+        font-size: 20px;
+    }
+    .aboutDes,.skillsDes,.projectDes{
+        font-size: 18px;
+    }
+    .homeOne h1{
+        font-size: 20px;
+    }
+    .homeOne h2{
+        font-size: 18px;
+    }
+    .homeOne h3{
+        font-size: 16px;
+    }
+    .aboutCart h2,.aboutCart2 h2{
+        font-size: 28px;
+    }
+    .aboutCart h3,.aboutCart2 h3{
+        font-size: 18px;
+    }
+    .Sb svg{
+        height: 20px;
+        width: 20px;
+    }
+    .SoMedia svg{
+        height: 20px;
+        width: 20px;
+    }
+    .box h2,.box3 h2{
+        font-size: 18px;
+        margin: 0;
+    }
+    .Sb svg{
+        margin: 0;
+    }
+    .allBoxes{
+        margin: 0;
+    }
+}
+@media only screen and (min-width :284px) and (max-width :320px){
+    #navGitLing{
+        text-align: center;
+        padding-top: 4px;
+        height: max-content;
+        right: 0%;
+        top: 16px;
+        width: 25%;
+        left: 75%;
+        display: none;
+    }
+    #navGitHub{
+        display: block;
+        color: white;
+        transition: 0.4s;
+        position: relative;
+        top: 20px;
+    }
+    #navList{
+        display: block;
+        position: relative;
+        top: 12px;
+        left: 6px;
+        height: 40px;
+        width: 40px;
+        color: white;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+    #navClose{
+        display: none;
+        position: relative;
+        top: 12px;
+        left: 6px;
+        height: 40px;
+        width: 40px;
+        color: rgb(133, 76, 230);
+        cursor: pointer;
+        transition: 0.4s;
+    }
+    #nav{
+        width: 94%;
+        left: 3%;
+    }
+    #nav h1{
+        font-size: 16px;
+        text-align: center;
+        left: 25%;
+        width: 50%;
+    }
+    #nav ul{
+        left: 00%;
+        top: 70px;
+        display: none;
+        width: 100%;
+    }
+    #nav ul li{
+        font-size: 18px;
+    }
+    
+    #header{
+        height: 80px;
+    }
+    #projectSec{
+        top: 240%;
+    }
+    .carts{
+        width: 98%;
+        left: 1%;
+    }
+    .cart{
+        width: 49.5%;
+        margin: 0;
+        margin-top: 2px;
+    }
+    #contactSec{
+        top: 470%;
+    }
+    .cont h2{
+        font-size: 16px;
+    }
+    footer{
+        top: 520%;
+        height: max-content;
+    }
+    #homeSec{
+        width: 100%;
+        overflow: hidden;
+    }
+    .allHome{
+        width: 100%;
+        overflow: hidden;
+        display: block;
+    }
+    .homeTwo{
+        width: 100%;
+        left: 0;
+        position: absolute;
+        left: 0%;
+        top: 0%;
+    }
+    .homeOne{
+        z-index: 1;
+        width: 100%;
+        left: 0;
+        position: relative;
+        left: 0;
+    }
+    .homeOne h1,.homeOne h2,.homeOne h3{
+        left: 0;
+        padding: 0 20px 0 20px;
+        text-align: center;
+    }
+    .homeimg{
+        height: 170px;
+        width: 170px;
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        filter: blur(6px);
+        margin: 0 25% 0 25%;
+    }
+    .SoMedia{
+        width: 60%;
+        left: 20%;
+    }
+    .aboutCarts{
+        width: 80%;
+        left: 10%;
+    }
+    .box,.box3{
+        width: 100%;
+        height: max-content;
+    }
+    .allBoxes{
+        width: 94%;
+        left: 3%;
+    }
+    .contacts{
+        width: 90%;
+        left: 05%;
+    }
+    .homeOne h1{
+        font-size: 24px;
+    }
+    .homeOne h2{
+        font-size: 26px;
+    }
+    .homeOne h3{
+        font-size: 20px;
+    }
+    .aboutTitle,.projectTitle,.skillsTitle,.contactTitle{
+        font-size: 26px;
+    }
+    .aboutDes,.projectDes,.skillsDes{
+        font-size: 22px;
+        padding: 0 20px 0 20px;
+    }
+    .cont h2{
+        font-size: 18px;
+    }
+    .smTitle{
+        font-size: 20px;
+    }
+    .footerTitle{
+        font-size: 26px;
+    } 
+    footer ul{
+        width: 90%;
+        left: 05%;
+    }
+    footer ul li{
+        font-size: 16px;
+    }
+    .box h2,.box3 h2{
+        font-size: 22px;
+    }
+    .vidDiv{
+        position: relative;
+        top: 0px;
+        left: 0;
+        margin-top: 0;
+        height: 100%;
+        width: 100%;
+    }
+    .video{
+        width: 100%;
+        height: 100%;
+    }
+    .freamworks{
+        top: 0;
+        margin-top: -20px;
+        width: 98%;
+        left: 1%;
+    }
+    .freamworks h3{
+        font-size: 10px;
+        margin-top: 2px;
+    }
+    .Sb{
+        height: 34px;
+        margin-top: 2px;
+    }
+    .Sb svg{
+        margin-top: -4px;
+        height: 22px;
+        width: 22px;
+    }
+    .Sb  label{
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    .aboutCart h2,.aboutCart2 h2{
+        font-size: 32px;
+    }
+    .aboutCart h3,.aboutCart2 h3{
+        font-size: 20px;
+    }
+    .copir{
+        padding-bottom: 16px;
+        font-size: 20px;
+        padding: 0 12px 12px 12px;
+    }
+    .vidTitle{
+        font-size: 18px;
+        margin: 0;
+    }
+    .vidDes,.vidDate{
+        font-size: 12px;
+        margin: 0;
+    }
+    .vidDes{
+        padding: 0 3px 0 3px;
+        font-size: 12px;
+    }
+    .projectTitle,.contactTitle,.skillsTitle,.aboutTitle{
+        font-size: 20px;
+    }
+    .aboutDes,.skillsDes,.projectDes{
+        font-size: 18px;
+    }
+    .homeOne h1{
+        font-size: 20px;
+    }
+    .homeOne h2{
+        font-size: 18px;
+    }
+    .homeOne h3{
+        font-size: 16px;
+    }
+    .aboutCart h2,.aboutCart2 h2{
+        font-size: 28px;
+    }
+    .aboutCart h3,.aboutCart2 h3{
+        font-size: 18px;
+    }
+    .Sb svg{
+        height: 20px;
+        width: 20px;
+    }
+    .SoMedia svg{
+        height: 20px;
+        width: 20px;
+    }
+    .box h2,.box3 h2{
+        font-size: 18px;
+        margin: 0;
+    }
+    .Sb svg{
+        margin: 0;
+    }
+    .allBoxes{
+        margin: 0;
+    }
+}
+@media only screen and (min-width :100px) and (max-width :284px){
+    #navGitLing{
+        text-align: center;
+        padding-top: 4px;
+        height: max-content;
+        right: 0%;
+        top: 16px;
+        width: 25%;
+        left: 75%;
+        display: none;
+    }
+    #navGitHub{
+        display: block;
+        color: white;
+        transition: 0.4s;
+        position: relative;
+        top: 20px;
+    }
+    #navList{
+        display: block;
+        position: relative;
+        top: 20px;
+        left: 6px;
+        height: 30px;
+        width: 30px;
+        color: white;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+    #navClose{
+        display: none;
+        position: relative;
+        top: 20px;
+        left: 6px;
+        height: 30px;
+        width: 30px;
+        color: rgb(133, 76, 230);
+        cursor: pointer;
+        transition: 0.4s;
+    }
+    #nav{
+        width: 94%;
+        left: 3%;
+    }
+    #nav h1{
+        font-size: 14px;
+        text-align: center;
+        left: 25%;
+        width: 50%;
+        top: 30px;
+    }
+    #nav ul{
+        left: 00%;
+        top: 70px;
+        display: none;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    #nav ul li{
+        font-size: 18px;
+        width: 30%;
+        text-align: center;
+    }
+    
+    #header{
+        height: 80px;
+    }
+    #projectSec{
+        top: 260%;
+    }
+    .carts{
+        width: 98%;
+        left: 1%;
+    }
+    .cart{
+        width: 80%;
+        left: 10%;
+        margin: 0;
+        margin-top: 2px;
+    }
+    #contactSec{
+        top: 610%;
+    }
+    footer{
+        top: 670%;
+        height: max-content;
+    }
+    #homeSec{
+        width: 100%;
+        overflow: hidden;
+    }
+    .allHome{
+        width: 100%;
+        overflow: hidden;
+        display: block;
+    }
+    .homeTwo{
+        width: 100%;
+        left: 0;
+        position: absolute;
+        left: 0%;
+        top: 0%;
+    }
+    .homeOne{
+        z-index: 1;
+        width: 100%;
+        left: 0;
+        position: relative;
+        left: 0;
+    }
+    .homeOne h1,.homeOne h2,.homeOne h3{
+        left: 0;
+        padding: 0 20px 0 20px;
+        text-align: center;
+    }
+    .homeimg{
+        height: 170px;
+        width: 170px;
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        filter: blur(6px);
+        margin: 0 25% 0 25%;
+    }
+    .SoMedia{
+        width: 60%;
+        left: 20%;
+    }
+    .aboutCarts{
+        width: 80%;
+        left: 10%;
+    }
+    .box,.box3{
+        width: 100%;
+        height: max-content;
+    }
+    .allBoxes{
+        width: 94%;
+        left: 3%;
+    }
+    .contacts{
+        width: 90%;
+        left: 05%;
+    }
+    .homeOne h1{
+        font-size: 24px;
+    }
+    .homeOne h2{
+        font-size: 26px;
+    }
+    .homeOne h3{
+        font-size: 20px;
+    }
+    .aboutTitle,.projectTitle,.skillsTitle,.contactTitle{
+        font-size: 26px;
+    }
+    .aboutDes,.projectDes,.skillsDes{
+        font-size: 22px;
+        padding: 0 20px 0 20px;
+    }
+    .cont h2{
+        font-size: 14px;
+        margin-top: 8px;
+    }
+    .smTitle{
+        font-size: 20px;
+    }
+    .footerTitle{
+        font-size: 26px;
+    } 
+    footer ul{
+        width: 90%;
+        left: 05%;
+    }
+    footer ul li{
+        font-size: 16px;
+    }
+    .box h2,.box3 h2{
+        font-size: 22px;
+    }
+    .vidDiv{
+        position: relative;
+        top: 0px;
+        left: 0;
+        margin-top: 0;
+        height: 100%;
+        width: 100%;
+    }
+    .video{
+        width: 100%;
+        height: 100%;
+    }
+    .freamworks{
+        top: 0;
+        margin-top: -20px;
+        width: 98%;
+        left: 1%;
+    }
+    .freamworks h3{
+        font-size: 10px;
+        margin-top: 2px;
+    }
+    .Sb{
+        height: 34px;
+        margin-top: 2px;
+    }
+    .Sb svg{
+        margin-top: -4px;
+        height: 22px;
+        width: 22px;
+    }
+    .Sb  label{
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    .aboutCart h2,.aboutCart2 h2{
+        font-size: 32px;
+    }
+    .aboutCart h3,.aboutCart2 h3{
+        font-size: 20px;
+    }
+    .copir{
+        padding-bottom: 16px;
+        font-size: 20px;
+        padding: 0 12px 12px 12px;
+    }
+    .vidTitle{
+        font-size: 18px;
+        margin: 0;
+    }
+    .vidDes,.vidDate{
+        font-size: 12px;
+        margin: 0;
+    }
+    .vidDes{
+        padding: 0 3px 0 3px;
+        font-size: 12px;
+    }
+    .projectTitle,.contactTitle,.skillsTitle,.aboutTitle{
+        font-size: 20px;
+    }
+    .aboutDes,.skillsDes,.projectDes{
+        font-size: 18px;
+    }
+    .homeOne h1{
+        font-size: 20px;
+    }
+    .homeOne h2{
+        font-size: 18px;
+    }
+    .homeOne h3{
+        font-size: 16px;
+    }
+    .aboutCart h2,.aboutCart2 h2{
+        font-size: 28px;
+    }
+    .aboutCart h3,.aboutCart2 h3{
+        font-size: 18px;
+    }
+    .Sb svg{
+        height: 20px;
+        width: 20px;
+    }
+    .SoMedia svg{
+        height: 20px;
+        width: 20px;
+    }
+    .box h2,.box3 h2{
+        font-size: 18px;
+        margin: 0;
+    }
+    .Sb svg{
+        margin: 0;
+    }
+    .allBoxes{
+        margin: 0;
+    }
+    .cont svg{
+        height: 25px;
+        width: 25px;
+
+    }
+}
