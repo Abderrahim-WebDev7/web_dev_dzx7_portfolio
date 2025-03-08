@@ -2819,13 +2819,19 @@ h1,h2,h3{
 }
 @media only screen and (min-width :390px) and (max-width :420px){
     #contactSec{
-        top: 590%;
+        top: 610%;
     }
     .cont h2{
         font-size: 16px;
     }
     footer{
-        top: 650%;
+        top: 670%;
         height: max-content;
+    }
+    #skillsSec{
+        top: 160%;
+    }
+    #projectSec{
+        top: 300%;
     }
 }
