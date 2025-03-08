@@ -586,11 +586,9 @@ h1,h2,h3{
         left: 30%;
     }
 }
-
 @media only screen and (max-width: 1127px), (min-width: 1388px) {
     #cont1 {
-        width: ; 
-        left: ;  
+        border: none; 
     }
 }
 @media only screen and (min-width :1127px) and (max-width :1337px){
@@ -756,6 +754,12 @@ h1,h2,h3{
     }
 }
 @media only screen and (min-width :669px) and (max-width :744px){
+    #nav ul li:hover{
+        color: white;
+    }
+    footer ul li:hover{
+        color: white;
+    }
     #navGitLing{
         text-align: center;
         padding-top: 4px;
@@ -910,6 +914,12 @@ h1,h2,h3{
     }
 }
 @media only screen and (min-width :550px) and (max-width :669px){
+    footer ul li:hover{
+        color: white;
+    }
+    #nav ul li:hover{
+        color: white;
+    }
     #navGitLing{
         text-align: center;
         padding-top: 4px;
@@ -1078,6 +1088,12 @@ h1,h2,h3{
     }
 }
 @media only screen and (min-width :447px) and (max-width :550px){
+    footer ul li:hover{
+        color: white;
+    }
+    #nav ul li:hover{
+        color: white;
+    }
     #navGitLing{
         text-align: center;
         padding-top: 4px;
@@ -1259,6 +1275,12 @@ h1,h2,h3{
     }
 }
 @media only screen and (min-width :433px) and (max-width :479px){
+    footer ul li:hover{
+        color: white;
+    }
+    #nav ul li:hover{
+        color: white;
+    }
     #navGitLing{
         text-align: center;
         padding-top: 4px;
@@ -1446,6 +1468,12 @@ h1,h2,h3{
     }
 }
 @media only screen and (min-width :384px) and (max-width :433px){
+    #nav ul li:hover{
+        color: white;
+    }
+    footer ul li:hover{
+        color: white;
+    }
     #navGitLing{
         text-align: center;
         padding-top: 4px;
@@ -1509,7 +1537,7 @@ h1,h2,h3{
         height: 80px;
     }
     #projectSec{
-        top: 250%;
+        top: 280%;
     }
     .carts{
         width: 96%;
@@ -1519,13 +1547,13 @@ h1,h2,h3{
         width: 49%;
     }
     #contactSec{
-        top: 500%;
+        top: 530%;
     }
     .cont h2{
         font-size: 16px;
     }
     footer{
-        top: 550%;
+        top: 580%;
         height: max-content;
     }
     #homeSec{
@@ -1676,6 +1704,12 @@ h1,h2,h3{
     }
 }
 @media only screen and (min-width :354px) and (max-width :384px){
+    footer ul li:hover{
+        color: white;
+    }
+    #nav ul li:hover{
+        color: white;
+    }
     #navGitLing{
         text-align: center;
         padding-top: 4px;
@@ -1933,6 +1967,12 @@ h1,h2,h3{
     }
 }
 @media only screen and (min-width :320px) and (max-width :354px){
+    footer ul li:hover{
+        color: white;
+    }
+    #nav ul li:hover{
+        color: white;
+    }
     footer ul li{
         font-size: 16px;
     }
@@ -2205,6 +2245,12 @@ h1,h2,h3{
     }
 }
 @media only screen and (min-width :284px) and (max-width :320px){
+    footer ul li:hover{
+        color: white;
+    }
+    #nav ul li:hover{
+        color: white;
+    }
     #navGitLing{
         text-align: center;
         padding-top: 4px;
@@ -2480,6 +2526,12 @@ h1,h2,h3{
     }
 }
 @media only screen and (min-width :100px) and (max-width :284px){
+    footer ul li:hover{
+        color: white;
+    }
+    #nav ul li:hover{
+        color: white;
+    }
     #navGitLing{
         text-align: center;
         padding-top: 4px;
@@ -2762,3 +2814,4 @@ h1,h2,h3{
 
     }
 }
+
