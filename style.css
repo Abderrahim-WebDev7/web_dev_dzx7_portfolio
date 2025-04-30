@@ -26,7 +26,7 @@ header{
     height: 80px;
     width: 100%;
     border-bottom: 1px solid #181a1b;
-    z-index: 999;
+    z-index: 998;
     position: fixed;
     background-color: #181a1b;
     transition: 0.6s;
@@ -570,6 +570,7 @@ h1,h2,h3{
 #navList,#navClose,#navGitHub{
     display: none;
 }
+
 @media only screen and (min-width: 1451) and (max-width: 1600px) {
     #contactSec {
         top: 480%;
@@ -1540,7 +1541,7 @@ h1,h2,h3{
         height: 80px;
     }
     #projectSec{
-        top: 280%;
+        top: 300%;
     }
     .carts{
         width: 96%;
@@ -1550,13 +1551,13 @@ h1,h2,h3{
         width: 49%;
     }
     #contactSec{
-        top: 560%;
+        top: 600%;
     }
     .cont h2{
         font-size: 16px;
     }
     footer{
-        top: 650%;
+        top: 660%;
         height: max-content;
     }
     #homeSec{
@@ -1704,6 +1705,9 @@ h1,h2,h3{
     }
     .vidDes{
         padding: 0 3px 0 3px;
+    }
+    #skillsSec{
+        top: 160%;
     }
 }
 @media only screen and (min-width :354px) and (max-width :384px){
@@ -2835,3 +2839,36 @@ h1,h2,h3{
         top: 300%;
     }
 }
+
+#homeSec,#abourSec, #projectSec, #skillsSec, #contactSec{
+    position: relative;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: max-content;
+    overflow: hidden;
+    height: max-content;
+    margin: 0;
+    padding: 0;
+}
+
+#projectSec, #skillsSec{
+    position: relative;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: max-content;
+    overflow: hidden;
+    height: max-content;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+}
+/*
+footer{
+    position: absolute;
+    top: 0px;
+    left: 0%;
+    width: 100%;
+    height: max-content;
+    overflow: hidden;
+}*/
