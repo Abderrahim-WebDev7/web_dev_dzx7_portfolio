@@ -1,37 +1,210 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-body{
-    background-color: #181a1b;
+
+body {
+    background-color: #000000;
     width: 100%;
     height: max-content;
+    position: relative;
+    overflow-x: hidden;
 }
-h1,h2,h3,h4,h5,h6,p{
-    user-select: none;
-  }
-::-webkit-scrollbar{
+
+/* إضافة النجوم المتحركة */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100000px;
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #ffffff, transparent),
+        radial-gradient(2px 2px at 40px 70px, #ffffff, transparent),
+        radial-gradient(1px 1px at 90px 40px, #ffffff, transparent),
+        radial-gradient(1px 1px at 130px 80px, #ffffff, transparent),
+        radial-gradient(2px 2px at 160px 30px, #ffffff, transparent),
+        radial-gradient(1px 1px at 200px 60px, #ffffff, transparent),
+        radial-gradient(2px 2px at 240px 20px, #ffffff, transparent),
+        radial-gradient(1px 1px at 280px 50px, #ffffff, transparent),
+        radial-gradient(2px 2px at 320px 80px, #ffffff, transparent),
+        radial-gradient(1px 1px at 360px 40px, #ffffff, transparent),
+        radial-gradient(2px 2px at 400px 70px, #ffffff, transparent),
+        radial-gradient(1px 1px at 440px 30px, #ffffff, transparent),
+        radial-gradient(2px 2px at 480px 60px, #ffffff, transparent),
+        radial-gradient(1px 1px at 520px 20px, #ffffff, transparent),
+        radial-gradient(2px 2px at 560px 50px, #ffffff, transparent),
+        radial-gradient(1px 1px at 600px 80px, #ffffff, transparent),
+        radial-gradient(2px 2px at 640px 40px, #ffffff, transparent),
+        radial-gradient(1px 1px at 680px 70px, #ffffff, transparent),
+        radial-gradient(2px 2px at 720px 30px, #ffffff, transparent),
+        radial-gradient(1px 1px at 760px 60px, #ffffff, transparent),
+        radial-gradient(2px 2px at 800px 20px, #ffffff, transparent),
+        radial-gradient(1px 1px at 840px 50px, #ffffff, transparent),
+        radial-gradient(2px 2px at 880px 80px, #ffffff, transparent),
+        radial-gradient(1px 1px at 920px 40px, #ffffff, transparent),
+        radial-gradient(2px 2px at 960px 70px, #ffffff, transparent),
+        radial-gradient(1px 1px at 1000px 30px, #ffffff, transparent),
+        radial-gradient(2px 2px at 1040px 60px, #ffffff, transparent),
+        radial-gradient(1px 1px at 1080px 20px, #ffffff, transparent),
+        radial-gradient(2px 2px at 1120px 50px, #ffffff, transparent),
+        radial-gradient(1px 1px at 1160px 80px, #ffffff, transparent),
+        radial-gradient(2px 2px at 1200px 40px, #ffffff, transparent),
+        radial-gradient(1px 1px at 1240px 70px, #ffffff, transparent),
+        radial-gradient(2px 2px at 1280px 30px, #ffffff, transparent),
+        radial-gradient(1px 1px at 1320px 60px, #ffffff, transparent),
+        radial-gradient(2px 2px at 1360px 20px, #ffffff, transparent),
+        radial-gradient(1px 1px at 1400px 50px, #ffffff, transparent),
+        radial-gradient(2px 2px at 1440px 80px, #ffffff, transparent),
+        radial-gradient(1px 1px at 1480px 40px, #ffffff, transparent),
+        radial-gradient(2px 2px at 1520px 70px, #ffffff, transparent),
+        radial-gradient(1px 1px at 1560px 30px, #ffffff, transparent),
+        radial-gradient(2px 2px at 1600px 60px, #ffffff, transparent),
+        radial-gradient(1px 1px at 1640px 20px, #ffffff, transparent),
+        radial-gradient(2px 2px at 1680px 50px, #ffffff, transparent),
+        radial-gradient(1px 1px at 1720px 80px, #ffffff, transparent),
+        radial-gradient(2px 2px at 1760px 40px, #ffffff, transparent),
+        radial-gradient(1px 1px at 1800px 70px, #ffffff, transparent),
+        radial-gradient(2px 2px at 1840px 30px, #ffffff, transparent),
+        radial-gradient(1px 1px at 1880px 60px, #ffffff, transparent),
+        radial-gradient(2px 2px at 1920px 20px, #ffffff, transparent),
+        radial-gradient(3px 3px at 50px 150px, #ffffff, transparent),
+        radial-gradient(1px 1px at 150px 200px, #ffffff, transparent),
+        radial-gradient(2px 2px at 250px 180px, #ffffff, transparent),
+        radial-gradient(1px 1px at 350px 220px, #ffffff, transparent),
+        radial-gradient(3px 3px at 450px 160px, #ffffff, transparent),
+        radial-gradient(1px 1px at 550px 190px, #ffffff, transparent),
+        radial-gradient(2px 2px at 650px 210px, #ffffff, transparent),
+        radial-gradient(1px 1px at 750px 170px, #ffffff, transparent),
+        radial-gradient(3px 3px at 850px 200px, #ffffff, transparent),
+        radial-gradient(1px 1px at 950px 180px, #ffffff, transparent),
+        radial-gradient(2px 2px at 1050px 220px, #ffffff, transparent),
+        radial-gradient(1px 1px at 1150px 160px, #ffffff, transparent),
+        radial-gradient(3px 3px at 1250px 190px, #ffffff, transparent),
+        radial-gradient(1px 1px at 1350px 210px, #ffffff, transparent),
+        radial-gradient(2px 2px at 1450px 170px, #ffffff, transparent),
+        radial-gradient(1px 1px at 1550px 200px, #ffffff, transparent),
+        radial-gradient(3px 3px at 1650px 180px, #ffffff, transparent),
+        radial-gradient(1px 1px at 1750px 220px, #ffffff, transparent),
+        radial-gradient(2px 2px at 1850px 160px, #ffffff, transparent),
+        radial-gradient(1px 1px at 1950px 190px, #ffffff, transparent);
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    animation: stars 9000s linear infinite;
+    z-index: -1;
+}
+
+@keyframes stars {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-100000px);
+    }
+}
+
+/* طبقة ثانية من النجوم */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100000px;
+    background-image: 
+        radial-gradient(1px 1px at 10px 10px, #ffffff, transparent),
+        radial-gradient(1px 1px at 30px 50px, #ffffff, transparent),
+        radial-gradient(2px 2px at 70px 20px, #ffffff, transparent),
+        radial-gradient(1px 1px at 110px 60px, #ffffff, transparent),
+        radial-gradient(1px 1px at 140px 10px, #ffffff, transparent),
+        radial-gradient(2px 2px at 180px 40px, #ffffff, transparent),
+        radial-gradient(1px 1px at 220px 70px, #ffffff, transparent),
+        radial-gradient(1px 1px at 260px 30px, #ffffff, transparent),
+        radial-gradient(2px 2px at 300px 60px, #ffffff, transparent),
+        radial-gradient(1px 1px at 340px 20px, #ffffff, transparent),
+        radial-gradient(1px 1px at 380px 50px, #ffffff, transparent),
+        radial-gradient(2px 2px at 420px 80px, #ffffff, transparent),
+        radial-gradient(1px 1px at 460px 40px, #ffffff, transparent),
+        radial-gradient(1px 1px at 500px 70px, #ffffff, transparent),
+        radial-gradient(2px 2px at 540px 30px, #ffffff, transparent),
+        radial-gradient(1px 1px at 580px 60px, #ffffff, transparent),
+        radial-gradient(1px 1px at 620px 20px, #ffffff, transparent),
+        radial-gradient(2px 2px at 660px 50px, #ffffff, transparent),
+        radial-gradient(1px 1px at 700px 80px, #ffffff, transparent),
+        radial-gradient(1px 1px at 740px 40px, #ffffff, transparent),
+        radial-gradient(2px 2px at 780px 70px, #ffffff, transparent),
+        radial-gradient(1px 1px at 820px 30px, #ffffff, transparent),
+        radial-gradient(1px 1px at 860px 60px, #ffffff, transparent),
+        radial-gradient(2px 2px at 900px 20px, #ffffff, transparent),
+        radial-gradient(1px 1px at 940px 50px, #ffffff, transparent),
+        radial-gradient(1px 1px at 980px 80px, #ffffff, transparent),
+        radial-gradient(2px 2px at 1020px 40px, #ffffff, transparent),
+        radial-gradient(1px 1px at 1060px 70px, #ffffff, transparent),
+        radial-gradient(1px 1px at 1100px 30px, #ffffff, transparent),
+        radial-gradient(2px 2px at 1140px 60px, #ffffff, transparent),
+        radial-gradient(1px 1px at 1180px 20px, #ffffff, transparent),
+        radial-gradient(1px 1px at 1220px 50px, #ffffff, transparent),
+        radial-gradient(2px 2px at 1260px 80px, #ffffff, transparent),
+        radial-gradient(1px 1px at 1300px 40px, #ffffff, transparent),
+        radial-gradient(1px 1px at 1340px 70px, #ffffff, transparent),
+        radial-gradient(2px 2px at 1380px 30px, #ffffff, transparent),
+        radial-gradient(1px 1px at 1420px 60px, #ffffff, transparent),
+        radial-gradient(1px 1px at 1460px 20px, #ffffff, transparent),
+        radial-gradient(2px 2px at 1500px 50px, #ffffff, transparent),
+        radial-gradient(1px 1px at 1540px 80px, #ffffff, transparent),
+        radial-gradient(1px 1px at 1580px 40px, #ffffff, transparent),
+        radial-gradient(2px 2px at 1620px 70px, #ffffff, transparent),
+        radial-gradient(1px 1px at 1660px 30px, #ffffff, transparent),
+        radial-gradient(1px 1px at 1700px 60px, #ffffff, transparent),
+        radial-gradient(2px 2px at 1740px 20px, #ffffff, transparent),
+        radial-gradient(1px 1px at 1780px 50px, #ffffff, transparent),
+        radial-gradient(1px 1px at 1820px 80px, #ffffff, transparent),
+        radial-gradient(2px 2px at 1860px 40px, #ffffff, transparent),
+        radial-gradient(1px 1px at 1900px 70px, #ffffff, transparent);
+    background-repeat: repeat;
+    background-size: 150px 150px;
+    animation: stars2 12000s linear infinite;
+    z-index: -1;
+}
+
+@keyframes stars2 {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-100000px);
+    }
+}
+
+::-webkit-scrollbar {
     width: 10px;
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
     background-color: rgb(133, 76, 230);
     border-radius: 10px;
 }
-::-webkit-scrollbar-track{
-    background-color: #181a1b;
+
+::-webkit-scrollbar-track {
+    background-color: #000000;
 }
-header{
+
+header {
     height: 80px;
     width: 100%;
-    border-bottom: 1px solid #181a1b;
-    z-index: 998;
+    border-bottom: 1px solid #000000;
+    z-index: 999;
     position: fixed;
-    background-color: #181a1b;
+    background-color: #00000000;
     transition: 0.6s;
 }
-nav{
+
+nav {
     height: 100%;
     width: 80%;
     overflow: hidden;
@@ -40,16 +213,19 @@ nav{
     position: absolute;
     left: 10%;
 }
-nav h1{
+
+nav h1 {
     color: white;
     position: absolute;
     top: 20px;
     cursor: pointer;
 }
-nav h1 span{
+
+nav h1 span {
     color: rgb(133, 76, 230);
 }
-nav ul{
+
+nav ul {
     list-style: none;
     justify-content: space-around;
     display: flex;
@@ -58,68 +234,165 @@ nav ul{
     top: 20px;
     left: 25%;
 }
-nav ul li{
+
+nav ul li {
     color: white;
     font-size: 22px;
-    cursor: pointer;transition: 0.4s;
+    cursor: pointer;
+    transition: 0.4s;
+    position: relative;
+    padding: 8px 0;
 }
-nav ul li:hover{
+
+nav ul li:hover {
     color: rgb(133, 76, 230);
 }
-#navGitLing{
-    border: 1px solid rgb(133, 76, 230);
+
+nav ul li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 2px;
+    width: 0%;
+    background-color: rgb(133, 76, 230);
+    transition: width 0.3s ease;
+}
+
+nav ul li.active {
+    color: rgb(133, 76, 230);
+}
+
+nav ul li.active::after {
+    width: 100%;
+}
+
+/* تحسينات للتصميم المتجاوب للشريط التنقل */
+@media (max-width: 768px) {
+    nav ul li {
+        font-size: 18px;
+        padding: 6px 0;
+    }
+    
+    nav ul li::after {
+        height: 1.5px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li {
+        font-size: 16px;
+        padding: 4px 0;
+    }
+    
+    nav ul li::after {
+        height: 1px;
+    }
+}
+
+/*
+nav ul li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+nav ul li.active::after {
+    width: 100%;
+}
+*/
+#navGitLing {
+    /*border: 1px solid rgb(133, 76, 230);*/
     color: rgb(133, 76, 230);
     align-items: center;
-    border-radius: 20px;
+    border-radius: 50%;
     cursor: pointer;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 3.18px 0px 0px 3.18px ;
+    /*font-size: 16px;*/
     transition: 0.6s ease-in-out;
     text-decoration: none;
-    height: 44px;
+    height: 40px;
+    width: 40px;
     position: absolute;
     left: 85%;
     top: 12px;
 }
-#navGitLing:hover{
-    background-color: rgb(133, 76, 230);
+
+#navGitLing:hover {
+    /*background-color: rgb(133, 76, 230);*/
     color: white;
+    transform: scale(1.1);
+    
 }
 
-#homeSec{
+#homeSec {
     width: 80%;
     height: max-content;
 }
-.allHome{
+
+.allHome {
     display: flex;
     justify-content: space-between;
+    
 }
-.homeOne, .homeTwo{
+
+.homeOne,
+.homeTwo {
     width: 45%;
     height: 500px;
+    margin-top: 80px;
 }
-.homeimg{
+
+.homeimg {
     border-radius: 50%;
-    border: 2px solid rgb(133, 76, 230);
     height: 50%;
     position: relative;
     top: 25%;
     left: 50%;
     animation: homeimg 5s infinite;
     cursor: pointer;
+    border: 3px solid transparent;
+    background: linear-gradient(45deg, 
+        rgba(133, 76, 230, 0.9), 
+        rgba(24, 136, 240, 0.9), 
+        rgba(133, 76, 230, 0.9), 
+            rgba(24, 136, 240, 0.9)) border-box;
+    background-clip: padding-box;
+    box-shadow: 
+        0 0 25px rgba(133, 76, 230, 0.7),
+        0 0 50px rgba(24, 136, 240, 0.5),
+        inset 0 0 25px rgba(133, 76, 230, 0.3);
+    transition: all 0.4s ease;
 }
-@keyframes homeimg{
-    0%{
+
+.homeimg:hover {
+    box-shadow: 
+        0 0 35px rgba(133, 76, 230, 0.9),
+        0 0 70px rgba(54, 158, 255, 0.877),
+        inset 0 0 35px rgba(133, 76, 230, 0.5);
+    transform: scale(1.05);
+}
+
+@keyframes homeimg {
+    0% {
         top: 190px;
     }
-    50%{
+
+    50% {
         top: 300px;
     }
-    100%{
+
+    100% {
         top: 190px;
     }
 }
-.homeOne h1{
+
+.homeOne h1 {
     position: relative;
     top: 40%;
     left: 30%;
@@ -127,10 +400,13 @@ nav ul li:hover{
     font-size: 34px;
     cursor: pointer;
 }
-.homeOne h1 span,.homeOne h3 span{
+
+.homeOne h1 span,
+.homeOne h3 span {
     color: rgb(133, 76, 230);
 }
-.homeOne h2{
+
+.homeOne h2 {
     position: relative;
     top: 44%;
     left: 30%;
@@ -140,7 +416,152 @@ nav ul li:hover{
     cursor: pointer;
     color: rgb(133, 76, 230);
 }
-.homeOne h3{
+
+/* تأثير الكتابة المتحركة */
+.typing-text {
+    /*color: rgb(133, 76, 230);*/
+    font-weight: bold;
+    background: linear-gradient(45deg,
+        rgb(132, 76, 230),
+        rgb(24, 136, 240));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.cursor {
+    color: rgb(133, 76, 230);
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+}
+
+/* SVG الواجهة الأمامية والخلفية */
+.frontend-svg::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin: 0 8px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23854dff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='2' y='3' width='20' height='14' rx='2' ry='2'/%3E%3Cline x1='8' y1='21' x2='16' y2='21'/%3E%3Cline x1='12' y1='17' x2='12' y2='21'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    animation: frontendGlow 2s ease-in-out infinite alternate;
+}
+
+.api-svg::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin: 0 8px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23854dff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='2' y='3' width='20' height='14' rx='2' ry='2'/%3E%3Cpath d='M8 9h8M8 13h6M8 17h4'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    animation: backendGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes frontendGlow {
+    0% {
+        filter: drop-shadow(0 0 2px rgba(133, 76, 230, 0.5));
+        transform: scale(1);
+    }
+
+    100% {
+        filter: drop-shadow(0 0 8px rgba(133, 76, 230, 0.8));
+        transform: scale(1.1);
+    }
+}
+
+@keyframes backendGlow {
+    0% {
+        filter: drop-shadow(0 0 2px rgba(133, 76, 230, 0.5));
+        transform: scale(1);
+    }
+
+    100% {
+        filter: drop-shadow(0 0 8px rgba(133, 76, 230, 0.8));
+        transform: scale(1.1);
+    }
+}
+
+/* تأثير hover للـ SVG */
+.frontend-svg:hover::before,
+.api-svg:hover::before,
+.database-svg:hover::before,
+.webapp-svg:hover::before {
+    filter: drop-shadow(0 0 12px rgba(133, 76, 230, 1));
+    transform: scale(1.2);
+    transition: all 0.3s ease;
+}
+
+/* SVG قواعد البيانات */
+.database-svg::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin: 0 8px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23854dff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cellipse cx='12' cy='5' rx='9' ry='3'/%3E%3Cpath d='M21 12c0 1.66-4 3-9 3s-9-1.34-9-3'/%3E%3Cpath d='M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    animation: databaseGlow 2s ease-in-out infinite alternate;
+}
+
+/* SVG Web Apps */
+.webapp-svg::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin: 0 8px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23854dff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='2' y='3' width='20' height='14' rx='2' ry='2'/%3E%3Cpath d='M8 9h8M8 13h6M8 17h4'/%3E%3Ccircle cx='18' cy='6' r='2'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    animation: webappGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes databaseGlow {
+    0% {
+        filter: drop-shadow(0 0 2px rgba(133, 76, 230, 0.5));
+        transform: scale(1);
+    }
+
+    100% {
+        filter: drop-shadow(0 0 8px rgba(133, 76, 230, 0.8));
+        transform: scale(1.1);
+    }
+}
+
+@keyframes webappGlow {
+    0% {
+        filter: drop-shadow(0 0 2px rgba(133, 76, 230, 0.5));
+        transform: scale(1);
+    }
+
+    100% {
+        filter: drop-shadow(0 0 8px rgba(133, 76, 230, 0.8));
+        transform: scale(1.1);
+    }
+}
+
+.homeOne h3 {
     position: relative;
     top: 48%;
     left: 30%;
@@ -152,24 +573,29 @@ nav ul li:hover{
 
 
 
-#abourSec{
+#abourSec {
     width: 100%;
     position: absolute;
     top: 80%;
 }
-.aboutTitle{
+
+.aboutTitle {
     text-align: center;
     font-size: 32px;
     color: white;
 }
-.aboutTitle span{
+
+.aboutTitle span {
     color: rgb(133, 76, 230);
 }
-.aboutDes{
+
+.aboutDes {
     text-align: center;
     color: white;
     margin-top: 18px;
 }
+
+/*
 .aboutCarts{
     display: flex;
     justify-content: space-around;
@@ -236,25 +662,234 @@ nav ul li:hover{
         text-shadow: 2px 8px 8px rgb(133, 76, 230);
     }
 }
+*/
+.aboutCarts {
+            display: flex;
+            justify-content: space-around;
+            height: max-content;
+            width: 20%;
+            position: relative;
+            left: 40%;
+            margin-top: 22px;
+            
+        }
+
+.aboutCartsOne,
+.aboutCartsTwo {
+            width: 47%;
+            
+        }
+
+        .aboutCartsTwo {
+            left: 0;
+        }
+
+        .aboutCartsOne {
+            right: 0;
+        }
+
+        .aboutCart {
+    background-color: rgba(34, 42, 53, 0.3);
+    /* شفاف 30% */
+    backdrop-filter: blur(10px);
+    /* تأثير blur */
+            -webkit-backdrop-filter: blur(10px);
+            height: 120px;
+            width: 100%;
+    border: 1px solid rgba(133, 76, 230, 0.2);
+    /* شفافية 20% */
+            margin-top: 12px;
+            border-top-left-radius: 18px;
+            border-bottom-right-radius: 18px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .aboutCart::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            background: conic-gradient(from 0deg, 
+            #00bcd4 0deg,
+            /* سماوي */
+            #2196f3 90deg,
+            /* أزرق */
+            #9c27b0 180deg,
+            /* بنفسجي */
+            #e91e63 270deg,
+            /* وردي */
+            #00bcd4 360deg
+            /* عودة للسماوي */
+            );
+            border-radius: 20px;
+            animation: rotate 6s linear infinite;
+            z-index: -1;
+            padding: 2px;
+        }
+
+        .aboutCart::after {
+            content: '';
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            right: 1px;
+            bottom: 1px;
+            background-color: rgb(12, 11, 11);
+            border-top-left-radius: 16px;
+            border-bottom-right-radius: 16px;
+            z-index: -1;
+        }
+
+        .aboutCart2 {
+    background-color: rgba(34, 42, 53, 0.3);
+    /* شفاف 30% */
+    backdrop-filter: blur(10px);
+    /* تأثير blur */
+            -webkit-backdrop-filter: blur(10px);
+            height: 120px;
+            width: 100%;
+    border: 1px solid rgba(133, 76, 230, 0.2);
+    /* شفافية 20% */
+            margin-top: 12px;
+            border-top-right-radius: 18px;
+            border-bottom-left-radius: 18px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .aboutCart2::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            background: conic-gradient(from 0deg, 
+            #00bcd4 0deg,
+            /* سماوي */
+            #2196f3 90deg,
+            /* أزرق */
+            #9c27b0 180deg,
+            /* بنفسجي */
+            #e91e63 270deg,
+            /* وردي */
+            #00bcd4 360deg
+            /* عودة للسماوي */
+            );
+            border-radius: 20px;
+            animation: rotate 6s linear infinite;
+            z-index: -1;
+            padding: 2px;
+        }
+
+        .aboutCart2::after {
+            content: '';
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            right: 1px;
+            bottom: 1px;
+            background-color: rgb(12, 11, 11);
+            border-top-right-radius: 16px;
+            border-bottom-left-radius: 16px;
+            z-index: -1;
+        }
+
+.aboutCart,
+.aboutCart2 {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+.aboutCart h2,
+.aboutCart h3,
+.aboutCart2 h2,
+.aboutCart2 h3 {
+            width: 100%;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+.aboutCart h2,
+.aboutCart2 h2 {
+            font-size: 38px;
+            color: rgb(133, 76, 230);
+            margin-top: 8px;
+            animation: about infinite 4s;
+        }
+
+.aboutCart h3,
+.aboutCart2 h3 {
+            font-size: 20px;
+            color: white;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        @keyframes about {
+            0% {
+                text-shadow: 2px 8px 8px rgb(133, 76, 230);
+            }
+
+            50% {
+                text-shadow: 2px 8px 8px rgba(132, 76, 230, 0);
+            }
+
+            100% {
+                text-shadow: 2px 8px 8px rgb(133, 76, 230);
+            }
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+/* تم إلغاء تشغيل الدوران عند التحويم لاسترجاع السلوك السابق */
+
+        /* تحسين للشاشات الصغيرة */
+        @media (max-width: 768px) {
+            .aboutCarts {
+                width: 90%;
+                left: 5%;
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+    .aboutCartsOne,
+    .aboutCartsTwo {
+                width: 100%;
+            }
+        }
 
 
 
-
-#skillsSec{
+#skillsSec {
     width: 100%;
     position: absolute;
     top: 140%;
 }
-.skillsTitle{
+
+.skillsTitle {
     text-align: center;
     font-size: 32px;
     color: rgb(133, 76, 230);
 }
-.skillsDes{
+
+.skillsDes {
     text-align: center;
     color: white;
 }
-.allBoxes{
+
+.allBoxes {
     display: flex;
     margin-top: 20px;
     flex-wrap: wrap;
@@ -263,54 +898,81 @@ nav ul li:hover{
     left: 15%;
     position: relative;
 }
-.box{
+
+.box {
     width: 46%;
     height: max-content;
-    border: 1px solid rgb(133, 76, 230);
+    /*border: 1px solid rgb(133, 76, 230);*/
     background-color: #222a35;
     padding: 8px;
     border-radius: 18px;
     margin-top: 20px;
-    box-shadow: 2px 4px 20px rgb(133, 76, 230);
+    /*box-shadow: 2px 4px 20px rgb(133, 76, 230);*/
     transition: 0.4s;
     cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    will-change: transform;
 }
-.box3{
+
+.box3 {
     width: 90%;
     height: max-content;
-    border: 1px solid rgb(133, 76, 230);
+    /*border: 1px solid rgb(133, 76, 230);*/
     background-color: #222a35;
     padding: 8px;
     border-radius: 18px;
     margin-top: 20px;
-    box-shadow: 2px 4px 20px rgb(133, 76, 230);
+    /*box-shadow: 2px 4px 20px rgb(133, 76, 230);*/
     transition: 0.4s;
     cursor: pointer;
+    overflow: hidden;
+    will-change: transform;
 }
-.box:hover,.box3:hover{
+/*
+.box:hover,
+.box3:hover {
     transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);
 }
-.allBoxes{
+*/
+.box:hover,
+.box3:hover {
+    transform: perspective(800px) rotateY(18deg) scale3d(1.05, 1.05, 1.05);
+    /* يمكنك تعديل زاوية الدوران حسب رغبتك */
+}
+
+.box,
+.box3 {
+    /* ...existing code... */
+    will-change: transform;
+}
+
+.allBoxes2 {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
-.box h2,.box3 h2{
+
+.box h2,
+.box3 h2 {
     text-align: center;
     color: white;
 }
-.Sb{
+
+.Sb {
     border: 1px solid rgb(133, 76, 230);
     padding: 8px;
     border-radius: 8px;
     background-color: rgb(133, 76, 230);
     margin-top: 12px;
 }
-.Sb svg{
+
+.Sb svg {
     height: 40px;
     width: 40px;
 }
-.Sb label{
+
+.Sb label {
     font-size: 20px;
 }
 
@@ -318,22 +980,25 @@ nav ul li:hover{
 
 
 
-#projectSec{
+#projectSec {
     position: absolute;
     top: 240%;
     width: 100%;
 }
-.projectTitle{
+
+.projectTitle {
     text-align: center;
     font-size: 32px;
     color: rgb(133, 76, 230);
 }
-.projectDes{
+
+.projectDes {
     text-align: center;
     color: white;
     margin-top: 12px;
 }
-.carts{
+
+.carts {
     width: 60%;
     position: relative;
     left: 20%;
@@ -342,37 +1007,127 @@ nav ul li:hover{
     justify-content: space-around;
     margin-top: 24px;
 }
-.cart{
+
+.cart {
     width: 32%;
     height: max-content;
     padding-bottom: 24px;
     overflow: hidden;
     margin-top: 20px;
-    background-color: #222a35;
+    background-color: rgb(12, 11, 11);
     border-radius: 12px;
     transition: 0.4s;
     border: 2px solid #181a1b;
+    transition: transform 0.4s;
+    will-change: transform;
 }
-.cart:hover{
+
+
+.cart:hover {
     transform: scale(1.03);
-    margin-top: 10px;
 }
-.vidDiv{
-    width: 90%;
-    height: 220px;
+
+.cart::before{
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: conic-gradient(from 0deg,
+            #00bcd4 0deg,
+            /* سماوي */
+            #2196f3 90deg,
+            /* أزرق */
+            #9c27b0 180deg,
+            /* بنفسجي */
+            #e91e63 270deg,
+            /* وردي */
+            #00bcd4 360deg
+            /* عودة للسماوي */
+        );
+    border-radius: 20px;
+    animation: rotate 6s linear infinite;
+    z-index: -1;
+    padding: 2px;
+    overflow: hidden;
+}
+
+.cart::after{
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    right: 1px;
+    bottom: 1px;
+    background-color: rgb(12, 11, 11);
+    z-index: -1;
+    overflow: hidden;
+}
+/*
+.vidDiv {
+    width: 100%;
+    height: 200px;
     position: relative;
-    left: 5%;
+    left: 0;
     top: 10px;
     margin-bottom: 16px;
 }
-.vidDiv video{
+
+iframe {
     height: 100%;
     width: 100%;
     position: relative;
     border-radius: 8px;
     transition: 0.4s;
+    object-fit: cover;
 }
-.freamworks{
+*/
+/*
+.vidDiv {
+    width: 100%;
+    height: 260px; /* يمكنك تعديل الارتفاع حسب الحاجة */
+    /*
+    margin: 0;
+    padding: 0;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #181a1b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* الفيديو أو iframe يمسك المنتصف ويملأ المساحة */
+/*
+.vidDiv iframe,
+.vidDiv video,
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border: none;
+    background: #181a1b;
+}
+*/
+/* تحسين أحجام الفيديوهات للشاشات الصغيرة */
+@media only screen and (max-width: 768px) {
+    .vidDiv {
+        height: 250px;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .vidDiv {
+        height: 200px;
+        margin-bottom: 15px;
+    }
+}
+
+.freamworks {
     height: max-content;
     width: 90%;
     position: relative;
@@ -382,9 +1137,12 @@ nav ul li:hover{
     justify-content: space-around;
     flex-wrap: wrap;
 }
-.freamworks h3{
+
+.freamworks h3 {
     display: block;
-    background-color: none;
+    background: linear-gradient(45deg,
+            rgba(132, 76, 230, 0.185),
+            rgba(24, 136, 240, 0.185)) border-box;
     color: rgb(133, 76, 230);
     border: 1px solid rgb(133, 76, 230);
     border-radius: 12px;
@@ -394,20 +1152,24 @@ nav ul li:hover{
     background-color: rgba(132, 76, 230, 0.089);
     cursor: pointer;
 }
-.vidTitle{
+
+.vidTitle {
     text-align: center;
     color: rgb(133, 76, 230);
     font-size: 28px;
     margin-top: 8px;
     cursor: pointer;
+    
 }
-.vidDes{
+
+.vidDes {
     text-align: center;
     color: white;
     margin: 12px 12px 0px 12px;
     cursor: pointer;
 }
-.vidDate{
+
+.vidDate {
     position: relative;
     left: 12px;
     top: 10px;
@@ -418,29 +1180,34 @@ nav ul li:hover{
 
 
 
-#contactSec{
+#contactSec {
     position: absolute;
     top: 430%;
     width: 100%;
 }
-.SoMedia svg{
+
+.SoMedia svg {
     height: 30px;
     width: 30px;
     color: white;
 }
-.SoMedia a{
+
+.SoMedia a {
     text-decoration: none;
     color: white;
 }
-.contactTitle{
+
+.contactTitle {
     text-align: center;
     font-size: 32px;
     color: white;
 }
-.contactTitle span{
+
+.contactTitle span {
     color: rgb(133, 76, 230);
 }
-.contacts{
+
+.contacts {
     width: 20%;
     display: flex;
     flex-wrap: wrap;
@@ -448,40 +1215,100 @@ nav ul li:hover{
     position: relative;
     left: 40%;
 }
-.cont{
+
+.cont {
+    /*
     width: 100%;
+    margin: 0% 30% 0% 30%;
     background-color: #222a35;
     border: 2px solid rgb(133, 76, 230);
     border-radius: 50px;
     height: 60px;
     margin-top: 10px;
+    */
+    width: 100%;
+    margin: 0% 30% 0% 30%;
+    background-color: rgb(12, 11, 11);
+    /*border: 2px solid rgb(133, 76, 230);*/
+    border-radius: 50px;
+    height: 60px;
+    margin-top: 10px;
+    position: relative; /* مهم لجعل absolute يعمل داخلها */
+    transition: transform 0.4s;
+    will-change: transform;
+    overflow: hidden;
 }
-.cont svg{
+
+
+.cont::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: conic-gradient(from 0deg,
+            #00bcd4 0deg,
+            /* سماوي */
+            #2196f3 90deg,
+            /* أزرق */
+            #9c27b0 180deg,
+            /* بنفسجي */
+            #e91e63 270deg,
+            /* وردي */
+            #00bcd4 360deg
+            /* عودة للسماوي */
+        );
+    border-radius: 20px;
+    animation: rotate 6s linear infinite;
+    z-index: -1;
+    padding: 2px;
+    overflow: hidden;
+}
+
+
+.cont::after {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    right: 1px;
+    bottom: 1px;
+    background-color: rgb(12, 11, 11);
+    z-index: -1;
+    overflow: hidden;
+}
+
+#contSvg {
     position: relative;
     height: 30px;
     width: 30px;
     top: 16px;
     left: 16px;
 }
-.cont h2{
+
+.cont h2 {
     color: white;
     text-align: center;
     position: relative;
     bottom: 20px;
     left: 20px;
 }
-.sm{
+
+.sm {
     width: 40%;
     position: relative;
     left: 30%;
     margin-top: 30px;
 }
-.smTitle{
+
+.smTitle {
     text-align: center;
     font-size: 28px;
     color: white;
 }
-.SoMedia{
+
+.SoMedia {
     width: 20%;
     flex-wrap: wrap;
     position: relative;
@@ -490,29 +1317,33 @@ nav ul li:hover{
     justify-content: space-around;
     margin-top: 16px;
 }
-.SoMedia svg{
+
+.SoMedia svg {
     transition: 0.4s;
     margin-top: 8px;
 }
-.SoMedia svg:hover{
+
+.SoMedia svg:hover {
     color: rgb(133, 76, 230);
     transform: scale(1.3);
 }
 
-footer{
+footer {
     position: absolute;
     top: 480%;
-    background-color: #121414;
+    background-color: #000000;
     width: 100%;
     border-top: 1px solid rgb(133, 76, 230);
     height: 180px;
 }
-.footerTitle{
+
+.footerTitle {
     text-align: center;
     margin-top: 10px;
     color: white;
 }
-footer ul{
+
+footer ul {
     list-style: none;
     width: 30%;
     display: flex;
@@ -521,24 +1352,29 @@ footer ul{
     left: 35%;
     top: 20px;
 }
-footer ul li{
+
+footer ul li {
     font-size: 22px;
     transition: 0.4s;
     cursor: pointer;
     color: white;
 }
-footer ul li:hover{
+
+footer ul li:hover {
     color: rgb(133, 76, 230);
 }
-.copir{
+
+.copir {
     text-align: center;
     margin-top: 66px;
     color: white;
 }
-.copir span{
+
+.copir span {
     color: rgb(133, 76, 230);
 }
-footer svg{
+
+footer svg {
     height: 40px;
     width: 40px;
     position: fixed;
@@ -551,23 +1387,33 @@ footer svg{
     border: 2px solid rgb(133, 76, 230);
     border-radius: 50px;
 }
-footer svg:hover{
+
+footer svg:hover {
     transform: rotate(360deg);
 }
-h1,h2,h3{
+
+h1,
+h2,
+h3 {
     cursor: pointer;
 }
-.cont svg{
+
+#contSvg {
     color: rgb(133, 76, 230);
 }
-.smTitle span{
+
+.smTitle span {
     color: rgb(133, 76, 230);
 }
-#upArrow{
+
+#upArrow {
     display: none;
     transition: 0.4s;
 }
-#navList,#navClose,#navGitHub{
+
+#navList,
+#navClose,
+#navGitHub {
     display: none;
 }
 
@@ -576,195 +1422,247 @@ h1,h2,h3{
         top: 480%;
     }
 }
+
 @media only screen and (min-width: 1337px) and (max-width: 1450px) {
     #contactSec {
         top: 450%;
     }
+
     #footer {
         top: 510%;
     }
 }
+
 @media only screen and (min-width: 1128px) and (max-width: 1387px) {
     #cont1 {
         width: 40%;
         left: 30%;
     }
 }
-@media only screen and (max-width: 1127px), (min-width: 1388px) {
+
+@media only screen and (max-width: 1127px),
+(min-width: 1388px) {
     #cont1 {
-        border: none; 
+        width: 100%; 
+        left: 0%;  
     }
 }
-@media only screen and (min-width :1127px) and (max-width :1337px){
-    #navGitLing{
+
+@media only screen and (min-width :1127px) and (max-width :1337px) {
+    #navGitLing {
         text-align: center;
         padding-top: 2px;
     }
-    #projectSec{
+
+    #projectSec {
         top: 260%;
     }
-    .carts{
+
+    .carts {
         width: 90%;
         left: 5%;
     }
-    #contactSec{
+
+    #contactSec {
         top: 460%;
     }
-    footer{
+
+    footer {
         top: 520%;
     }
-    .SoMedia{
+
+    .SoMedia {
         width: 25%;
         left: 37.5%;
     }
 }
-@media only screen and (min-width :967px) and (max-width :1127px){
-    #navGitLing{
+
+@media only screen and (min-width :967px) and (max-width :1127px) {
+    #navGitLing {
         text-align: center;
         padding-top: 2px;
     }
-    #projectSec{
+
+    #projectSec {
         top: 240%;
     }
-    .carts{
+
+    .carts {
         width: 90%;
         left: 5%;
     }
-    #contactSec{
+
+    #contactSec {
         top: 440%;
     }
-    footer{
+
+    footer {
         top: 500%;
     }
-    .SoMedia{
+
+    .SoMedia {
         width: 30%;
         left: 35%;
     }
-    .aboutCarts{
+
+    .aboutCarts {
         width: 30%;
         left: 35%;
     }
-    .allBoxes{
+
+    .allBoxes {
         width: 94%;
         left: 3%;
     }
-    .contacts{
+
+    .contacts {
         width: 30%;
         left: 35%;
     }
-    .vidDiv{
+
+    .vidDiv {
         top: 10px;
     }
 }
-@media only screen and (min-width :744px) and (max-width :967px){
-    #navGitLing{
+
+@media only screen and (min-width :744px) and (max-width :967px) {
+    #navGitLing {
         text-align: center;
         padding-top: 2px;
         height: max-content;
     }
-    #projectSec{
+
+    #projectSec {
         top: 240%;
     }
-    .carts{
+
+    .carts {
         width: 90%;
         left: 5%;
     }
-    #contactSec{
+
+    #contactSec {
         top: 430%;
     }
-    footer{
+
+    footer {
         top: 480%;
     }
-    .SoMedia{
+
+    .SoMedia {
         width: 40%;
         left: 30%;
     }
-    .aboutCarts{
+
+    .aboutCarts {
         width: 40%;
         left: 30%;
     }
-    .allBoxes{
+
+    .allBoxes {
         width: 94%;
         left: 3%;
     }
-    .contacts{
+
+    .contacts {
         width: 40%;
         left: 30%;
     }
-    #nav{
+
+    #nav {
         width: 94%;
         left: 3%;
     }
-    #nav h1{
+
+    #nav h1 {
         font-size: 22px;
         left: 0%;
     }
-    #nav ul{
+
+    #nav ul {
         left: 28%;
     }
-    #nav ul li{
+
+    #nav ul li {
         font-size: 20px;
     }
-    #navGitLing{
+
+    #navGitLing {
         right: 0%;
     }
-    .homeOne h1{
+
+    .homeOne h1 {
         font-size: 24px;
     }
-    .homeOne h2{
+
+    .homeOne h2 {
         font-size: 26px;
     }
-    .homeOne h3{
+
+    .homeOne h3 {
         font-size: 20px;
     }
-    .aboutTitle,.projectTitle,.skillsTitle,.contactTitle{
+
+    .aboutTitle,
+    .projectTitle,
+    .skillsTitle,
+    .contactTitle {
         font-size: 26px;
     }
-    .aboutDes,.projectDes,.skillsDes{
+
+    .aboutDes,
+    .projectDes,
+    .skillsDes {
         font-size: 22px;
         padding: 0 20px 0 20px;
     }
-    .cont h2,.smTitle{
+
+    .cont h2,
+    .smTitle {
         font-size: 22px;
     }
-    .footerTitle{
+
+    .footerTitle {
         font-size: 26px;
     } 
-    footer ul{
+
+    footer ul {
         width: 60%;
         left: 20%;
     }
-    .box h2,.box3 h2{
+
+    .box h2,
+    .box3 h2 {
         font-size: 22px;
     }
-    .vidDiv{
+
+    .vidDiv {
         position: relative;
         top: 10px;
         margin-top: 0;
         height: max-content;
     }
-    .freamworks{
+
+    .freamworks {
         top: 0;
-        margin-top: -20px;
+        margin-top: 00px;
     }
-    .Sb{
+
+    .Sb {
         height: 50px;
     }
-    .Sb svg{
+
+    .Sb svg {
         margin-top: -4px;
     }
-    .Sb  label{
+
+    .Sb label {
         margin-bottom: 10px;
     }
 }
-@media only screen and (min-width :669px) and (max-width :744px){
-    #nav ul li:hover{
-        color: white;
-    }
-    footer ul li:hover{
-        color: white;
-    }
-    #navGitLing{
+
+@media only screen and (min-width :669px) and (max-width :744px) {
+    #navGitLing {
         text-align: center;
         padding-top: 4px;
         height: max-content;
@@ -774,14 +1672,20 @@ h1,h2,h3{
         left: 75%;
         display: none;
     }
-    #navGitHub{
+
+    #navGitHub {
         display: block;
         color: white;
         transition: 0.4s;
         position: relative;
         top: 20px;
     }
-    #navList{
+
+    nav ul{
+        display: flex;
+    }
+
+    #navList {
         display: block;
         position: relative;
         top: 8px;
@@ -792,7 +1696,8 @@ h1,h2,h3{
         cursor: pointer;
         transition: 0.4s;
     }
-    #navClose{
+
+    #navClose {
         display: none;
         position: relative;
         top: 8px;
@@ -803,128 +1708,146 @@ h1,h2,h3{
         cursor: pointer;
         transition: 0.4s;
     }
-    #nav{
+
+    #nav {
         width: 94%;
         left: 3%;
     }
-    #nav h1{
+
+    #nav h1 {
         font-size: 22px;
         text-align: center;
         left: 25%;
         width: 50%;
     }
-    #nav ul{
+
+    #nav ul {
         left: 15%;
         top: 70px;
         display: none;
         width: 70%;
     }
-    #nav ul li{
+
+    #nav ul li {
         font-size: 20px;
     }
     
-    #header{
+    #header {
         height: 80px;
     }
-    #projectSec{
+
+    #projectSec {
         top: 240%;
     }
-    .carts{
+
+    .carts {
         width: 90%;
         left: 5%;
     }
-    #contactSec{
+
+    #contactSec {
         top: 500%;
     }
-    footer{
+
+    footer {
         top: 550%;
     }
-    .SoMedia{
+
+    .SoMedia {
         width: 40%;
         left: 30%;
     }
-    .aboutCarts{
+
+    .aboutCarts {
         width: 40%;
         left: 30%;
     }
-    .allBoxes{
+
+    .allBoxes {
         width: 94%;
         left: 3%;
     }
-    .contacts{
+
+    .contacts {
         width: 40%;
         left: 30%;
     }
-    .homeOne h1{
+
+    .homeOne h1 {
         font-size: 24px;
     }
-    .homeOne h2{
+
+    .homeOne h2 {
         font-size: 26px;
     }
-    .homeOne h3{
+
+    .homeOne h3 {
         font-size: 20px;
     }
-    .aboutTitle,.projectTitle,.skillsTitle,.contactTitle{
+
+    .aboutTitle,
+    .projectTitle,
+    .skillsTitle,
+    .contactTitle {
         font-size: 26px;
     }
-    .aboutDes,.projectDes,.skillsDes{
+
+    .aboutDes,
+    .projectDes,
+    .skillsDes {
         font-size: 22px;
         padding: 0 20px 0 20px;
     }
-    .cont h2,.smTitle{
+
+    .cont h2,
+    .smTitle {
         font-size: 22px;
     }
-    .footerTitle{
+
+    .footerTitle {
         font-size: 26px;
     } 
-    footer ul{
+
+    footer ul {
         width: 60%;
         left: 20%;
     }
-    .box h2,.box3 h2{
+
+    .box h2,
+    .box3 h2 {
         font-size: 22px;
     }
-    .vidDiv{
+
+    .vidDiv {
         position: relative;
         top: 10px;
         margin-top: 0;
         height: max-content;
     }
-    .freamworks{
+
+    .freamworks {
         top: 0;
-        margin-top: -20px;
+        margin-top: 0px;
     }
-    .Sb{
+
+    .Sb {
         height: 50px;
     }
-    .Sb svg{
+
+    .Sb svg {
         margin-top: -4px;
         height: 25px;
         width: 25px;
     }
-    .Sb  label{
+
+    .Sb label {
         margin-bottom: 10px;
         font-size: 18px;
     }
-    .carts{
-        width: 80%;
-        left: 10%;
-    }
-    .cart{
-        width: 50%;
-    }
-    .vidDes{
-        font-size: 18px;
-    }
 }
-@media only screen and (min-width :550px) and (max-width :669px){
-    footer ul li:hover{
-        color: white;
-    }
-    #nav ul li:hover{
-        color: white;
-    }
-    #navGitLing{
+
+@media only screen and (min-width :550px) and (max-width :669px) {
+    #navGitLing {
         text-align: center;
         padding-top: 4px;
         height: max-content;
@@ -934,14 +1857,16 @@ h1,h2,h3{
         left: 75%;
         display: none;
     }
-    #navGitHub{
+
+    #navGitHub {
         display: block;
         color: white;
         transition: 0.4s;
         position: relative;
         top: 20px;
     }
-    #navList{
+
+    #navList {
         display: block;
         position: relative;
         top: 8px;
@@ -952,7 +1877,8 @@ h1,h2,h3{
         cursor: pointer;
         transition: 0.4s;
     }
-    #navClose{
+
+    #navClose {
         display: none;
         position: relative;
         top: 8px;
@@ -963,142 +1889,165 @@ h1,h2,h3{
         cursor: pointer;
         transition: 0.4s;
     }
-    #nav{
+
+    #nav {
         width: 94%;
         left: 3%;
     }
-    #nav h1{
+
+    #nav h1 {
         font-size: 22px;
         text-align: center;
         left: 25%;
         width: 50%;
     }
-    #nav ul{
+
+    #nav ul {
         left: 15%;
         top: 70px;
         display: none;
         width: 70%;
     }
-    #nav ul li{
+
+    #nav ul li {
         font-size: 20px;
     }
     
-    #header{
+    #header {
         height: 80px;
     }
-    #projectSec{
+
+    #projectSec {
         top: 240%;
     }
-    .carts{
+
+    .carts {
         width: 90%;
         left: 5%;
     }
-    #contactSec{
+
+    #contactSec {
         top: 510%;
     }
-    footer{
+
+    footer {
         top: 560%;
         height: max-content;
     }
-    .homeimg{
+
+    .homeimg {
         height: 200px;
         width: 200px;
     }
-    .SoMedia{
+
+    .SoMedia {
         width: 50%;
         left: 25%;
     }
-    .aboutCarts{
+
+    .aboutCarts {
         width: 50%;
         left: 25%;
     }
-    .allBoxes{
+
+    .allBoxes {
         width: 94%;
         left: 3%;
     }
-    .contacts{
+
+    .contacts {
         width: 50%;
         left: 25%;
     }
-    .homeOne h1{
+
+    .homeOne h1 {
         font-size: 24px;
     }
-    .homeOne h2{
+
+    .homeOne h2 {
         font-size: 26px;
     }
-    .homeOne h3{
+
+    .homeOne h3 {
         font-size: 20px;
     }
-    .aboutTitle,.projectTitle,.skillsTitle,.contactTitle{
+
+    .aboutTitle,
+    .projectTitle,
+    .skillsTitle,
+    .contactTitle {
         font-size: 26px;
     }
-    .aboutDes,.projectDes,.skillsDes{
+
+    .aboutDes,
+    .projectDes,
+    .skillsDes {
         font-size: 22px;
         padding: 0 20px 0 20px;
     }
-    .cont h2,.smTitle{
+
+    .cont h2,
+    .smTitle {
         font-size: 22px;
     }
-    .footerTitle{
+
+    .footerTitle {
         font-size: 26px;
     } 
-    footer ul{
+
+    footer ul {
         width: 60%;
         left: 20%;
     }
-    .box h2,.box3 h2{
+
+    .box h2,
+    .box3 h2 {
         font-size: 22px;
     }
-    .vidDiv{
+
+    .vidDiv {
         position: relative;
         top: 10px;
         margin-top: 0;
         height: max-content;
     }
-    .freamworks{
+
+    .freamworks {
         top: 0;
-        margin-top: -20px;
+        margin-top: 0px;
     }
-    .Sb{
+
+    .Sb {
         height: 40px;
     }
-    .Sb svg{
+
+    .Sb svg {
         margin-top: -4px;
         height: 22px;
         width: 22px;
     }
-    .Sb  label{
+
+    .Sb label {
         margin-bottom: 10px;
         font-size: 16px;
     }
-    .carts{
+
+    .carts {
         width: 80%;
         left: 10%;
     }
-    .cart{
+
+    .cart {
         width: 50%;
     }
-    .vidDes{
+
+    .vidDes {
         font-size: 18px;
     }
-    .aboutCart h2,.aboutCart2 h2{
-        font-size: 32px;
-    }
-    .aboutCart h3,.aboutCart2 h3{
-        font-size: 20px;
-    }
-    .copir{
-        padding-bottom: 16px;
-    }
 }
-@media only screen and (min-width :447px) and (max-width :550px){
-    footer ul li:hover{
-        color: white;
-    }
-    #nav ul li:hover{
-        color: white;
-    }
-    #navGitLing{
+
+@media only screen and (min-width :447px) and (max-width :550px) {
+    #navGitLing {
         text-align: center;
         padding-top: 4px;
         height: max-content;
@@ -1108,14 +2057,16 @@ h1,h2,h3{
         left: 75%;
         display: none;
     }
-    #navGitHub{
+
+    #navGitHub {
         display: block;
         color: white;
         transition: 0.4s;
         position: relative;
         top: 20px;
     }
-    #navList{
+
+    #navList {
         display: block;
         position: relative;
         top: 8px;
@@ -1126,7 +2077,8 @@ h1,h2,h3{
         cursor: pointer;
         transition: 0.4s;
     }
-    #navClose{
+
+    #navClose {
         display: none;
         position: relative;
         top: 8px;
@@ -1137,98 +2089,129 @@ h1,h2,h3{
         cursor: pointer;
         transition: 0.4s;
     }
-    #nav{
+
+    #nav {
         width: 94%;
         left: 3%;
     }
-    #nav h1{
+
+    #nav h1 {
         font-size: 22px;
         text-align: center;
         left: 25%;
         width: 50%;
     }
-    #nav ul{
+
+    #nav ul {
         left: 15%;
         top: 70px;
         display: none;
         width: 70%;
     }
-    #nav ul li{
+
+    #nav ul li {
         font-size: 20px;
     }
     
-    #header{
+    #header {
         height: 80px;
     }
-    #projectSec{
+
+    #projectSec {
         top: 240%;
     }
-    .carts{
+
+    .carts {
         width: 96%;
         left: 2%;
     }
-    .cart{
+
+    .cart {
         width: 49%;
     }
-    #contactSec{
+
+    #contactSec {
         top: 490%;
     }
-    footer{
+
+    footer {
         top: 550%;
         height: max-content;
     }
-    .homeimg{
+
+    .homeimg {
         height: 200px;
         width: 200px;
         position: relative;
         left: 30%;
     }
-    .SoMedia{
+
+    .SoMedia {
         width: 60%;
         left: 20%;
     }
-    .aboutCarts{
+
+    .aboutCarts {
         width: 50%;
         left: 25%;
     }
-    .allBoxes{
+
+    .allBoxes {
         width: 94%;
         left: 3%;
     }
-    .contacts{
+
+    .contacts {
         width: 60%;
         left: 20%;
     }
-    .homeOne h1{
+
+    .homeOne h1 {
         font-size: 24px;
     }
-    .homeOne h2{
+
+    .homeOne h2 {
         font-size: 26px;
     }
-    .homeOne h3{
+
+    .homeOne h3 {
         font-size: 20px;
     }
-    .aboutTitle,.projectTitle,.skillsTitle,.contactTitle{
+
+    .aboutTitle,
+    .projectTitle,
+    .skillsTitle,
+    .contactTitle {
         font-size: 26px;
     }
-    .aboutDes,.projectDes,.skillsDes{
+
+    .aboutDes,
+    .projectDes,
+    .skillsDes {
         font-size: 22px;
         padding: 0 20px 0 20px;
     }
-    .cont h2,.smTitle{
+
+    .cont h2,
+    .smTitle {
         font-size: 22px;
     }
-    .footerTitle{
+
+    .footerTitle {
         font-size: 26px;
     } 
-    footer ul{
+
+    footer ul {
         width: 90%;
         left: 05%;
     }
-    .box h2,.box3 h2{
+
+    .box h2,
+    .box3 h2 {
         font-size: 22px;
     }
-    .vidDiv{
+
+    .vidDiv {
         position: relative;
         top: 0px;
         left: 0;
@@ -1236,56 +2219,57 @@ h1,h2,h3{
         height: 100%;
         width: 100%;
     }
-    .video{
+
+    .video {
         width: 100%;
         height: 100%;
     }
-    .freamworks{
+
+    .freamworks {
         top: 0;
         margin-top: -20px;
     }
-    .freamworks h3{
+
+    .freamworks h3 {
         font-size: 10px;
     }
-    .Sb{
+
+    .Sb {
         height: 40px;
     }
-    .Sb svg{
+
+    .Sb svg {
         margin-top: -4px;
         height: 22px;
         width: 22px;
     }
-    .Sb  label{
+
+    .Sb label {
         margin-bottom: 10px;
         font-size: 16px;
     }
-    .vidDes{
+
+    .vidDes {
         font-size: 18px;
     }
-    .aboutCart h2,.aboutCart2 h2{
+
+    .aboutCart h2,
+    .aboutCart2 h2 {
         font-size: 32px;
     }
-    .aboutCart h3,.aboutCart2 h3{
+
+    .aboutCart h3,
+    .aboutCart2 h3 {
         font-size: 20px;
     }
-    .copir{
+
+    .copir {
         padding-bottom: 16px;
     }
-    .vidTitle{
-        font-size: 24px;
-    }
-    .vidDes,.vidDate{
-        font-size: 16px;
-    }
 }
-@media only screen and (min-width :433px) and (max-width :479px){
-    footer ul li:hover{
-        color: white;
-    }
-    #nav ul li:hover{
-        color: white;
-    }
-    #navGitLing{
+
+@media only screen and (min-width :433px) and (max-width :479px) {
+    #navGitLing {
         text-align: center;
         padding-top: 4px;
         height: max-content;
@@ -1295,14 +2279,16 @@ h1,h2,h3{
         left: 75%;
         display: none;
     }
-    #navGitHub{
+
+    #navGitHub {
         display: block;
         color: white;
         transition: 0.4s;
         position: relative;
         top: 20px;
     }
-    #navList{
+
+    #navList {
         display: block;
         position: relative;
         top: 8px;
@@ -1313,7 +2299,8 @@ h1,h2,h3{
         cursor: pointer;
         transition: 0.4s;
     }
-    #navClose{
+
+    #navClose {
         display: none;
         position: relative;
         top: 8px;
@@ -1324,102 +2311,135 @@ h1,h2,h3{
         cursor: pointer;
         transition: 0.4s;
     }
-    #nav{
+
+    #nav {
         width: 94%;
         left: 3%;
     }
-    #nav h1{
+
+    #nav h1 {
         font-size: 20px;
         text-align: center;
         left: 25%;
         width: 50%;
     }
-    #nav ul{
+
+    #nav ul {
         left: 05%;
         top: 70px;
         display: none;
         width: 90%;
     }
-    #nav ul li{
+
+    #nav ul li {
         font-size: 18px;
     }
     
-    #header{
+    #header {
         height: 80px;
     }
-    #projectSec{
+
+    #projectSec {
         top: 240%;
     }
-    .carts{
+
+    .carts {
         width: 96%;
         left: 2%;
     }
-    .cart{
+
+    .cart {
         width: 49%;
     }
-    #contactSec{
+
+    #contactSec {
         top: 500%;
     }
-    footer{
+
+    footer {
         top: 550%;
         height: max-content;
     }
-    .homeimg{
+
+    .homeimg {
         height: 170px;
         width: 170px;
         position: relative;
         left: 30%;
     }
-    .SoMedia{
+
+    .SoMedia {
         width: 60%;
         left: 20%;
     }
-    .aboutCarts{
+
+    .aboutCarts {
         width: 60%;
         left: 20%;
     }
-    .box,.box3{
+
+    .box,
+    .box3 {
         width: 100%;
         height: max-content;
     }
-    .allBoxes{
+
+    .allBoxes {
         width: 94%;
         left: 3%;
     }
-    .contacts{
+
+    .contacts {
         width: 70%;
         left: 15%;
     }
-    .homeOne h1{
+
+    .homeOne h1 {
         font-size: 24px;
     }
-    .homeOne h2{
+
+    .homeOne h2 {
         font-size: 26px;
     }
-    .homeOne h3{
+
+    .homeOne h3 {
         font-size: 20px;
     }
-    .aboutTitle,.projectTitle,.skillsTitle,.contactTitle{
+
+    .aboutTitle,
+    .projectTitle,
+    .skillsTitle,
+    .contactTitle {
         font-size: 26px;
     }
-    .aboutDes,.projectDes,.skillsDes{
+
+    .aboutDes,
+    .projectDes,
+    .skillsDes {
         font-size: 22px;
         padding: 0 20px 0 20px;
     }
-    .cont h2,.smTitle{
+
+    .cont h2,
+    .smTitle {
         font-size: 22px;
     }
-    .footerTitle{
+
+    .footerTitle {
         font-size: 26px;
     } 
-    footer ul{
+
+    footer ul {
         width: 90%;
         left: 05%;
     }
-    .box h2,.box3 h2{
+
+    .box h2,
+    .box3 h2 {
         font-size: 22px;
     }
-    .vidDiv{
+
+    .vidDiv {
         position: relative;
         top: 0px;
         left: 0;
@@ -1427,58 +2447,74 @@ h1,h2,h3{
         height: 100%;
         width: 100%;
     }
-    .video{
+
+    .video {
         width: 100%;
         height: 100%;
     }
-    .freamworks{
+
+    .freamworks {
         top: 0;
         margin-top: -20px;
     }
-    .freamworks h3{
+
+    .freamworks h3 {
         font-size: 10px;
     }
-    .Sb{
+
+    .Sb {
         height: 40px;
     }
-    .Sb svg{
+
+    .Sb svg {
         margin-top: -4px;
         height: 22px;
         width: 22px;
     }
-    .Sb  label{
+
+    .Sb label {
         margin-bottom: 10px;
         font-size: 16px;
     }
-    .vidDes{
+
+    .vidDes {
         font-size: 18px;
     }
-    .aboutCart h2,.aboutCart2 h2{
+
+    .aboutCart h2,
+    .aboutCart2 h2 {
         font-size: 32px;
     }
-    .aboutCart h3,.aboutCart2 h3{
+
+    .aboutCart h3,
+    .aboutCart2 h3 {
         font-size: 20px;
     }
-    .copir{
+
+    .copir {
         padding-bottom: 16px;
         font-size: 20px;
         padding: 0 12px 12px 12px;
     }
-    .vidTitle{
+
+    .vidTitle {
         font-size: 24px;
     }
-    .vidDes,.vidDate{
+
+    .vidDes,
+    .vidDate {
         font-size: 16px;
     }
+    .contacts{
+        width: 100%;
+    }
+    .cont{
+        width: 100%;
+    }
 }
-@media only screen and (min-width :384px) and (max-width :433px){
-    #nav ul li:hover{
-        color: white;
-    }
-    footer ul li:hover{
-        color: white;
-    }
-    #navGitLing{
+
+@media only screen and (min-width :384px) and (max-width :433px) {
+    #navGitLing {
         text-align: center;
         padding-top: 4px;
         height: max-content;
@@ -1488,14 +2524,16 @@ h1,h2,h3{
         left: 75%;
         display: none;
     }
-    #navGitHub{
+
+    #navGitHub {
         display: block;
         color: white;
         transition: 0.4s;
         position: relative;
         top: 20px;
     }
-    #navList{
+
+    #navList {
         display: block;
         position: relative;
         top: 12px;
@@ -1506,7 +2544,8 @@ h1,h2,h3{
         cursor: pointer;
         transition: 0.4s;
     }
-    #navClose{
+
+    #navClose {
         display: none;
         position: relative;
         top: 12px;
@@ -1517,78 +2556,96 @@ h1,h2,h3{
         cursor: pointer;
         transition: 0.4s;
     }
-    #nav{
+
+    #nav {
         width: 94%;
         left: 3%;
     }
-    #nav h1{
+
+    #nav h1 {
         font-size: 20px;
         text-align: center;
         left: 25%;
         width: 50%;
     }
-    #nav ul{
+
+    #nav ul {
         left: 02%;
         top: 70px;
         display: none;
         width: 98%;
     }
-    #nav ul li{
+
+    #nav ul li {
         font-size: 18px;
     }
     
-    #header{
+    #header {
         height: 80px;
     }
-    #projectSec{
-        top: 300%;
+
+    #projectSec {
+        top: 250%;
     }
-    .carts{
+
+    .carts {
         width: 96%;
         left: 2%;
     }
-    .cart{
+
+    .cart {
         width: 49%;
     }
-    #contactSec{
-        top: 600%;
+
+    #contactSec {
+        top: 500%;
     }
-    .cont h2{
+
+    .cont h2 {
         font-size: 16px;
     }
-    footer{
-        top: 660%;
+
+    footer {
+        top: 550%;
         height: max-content;
     }
-    #homeSec{
+
+    #homeSec {
         width: 100%;
         overflow: hidden;
     }
-    .allHome{
+
+    .allHome {
         width: 100%;
         overflow: hidden;
         display: block;
     }
-    .homeTwo{
+
+    .homeTwo {
         width: 100%;
         left: 0;
         position: absolute;
         left: 0%;
         top: 0%;
     }
-    .homeOne{
+
+    .homeOne {
         z-index: 1;
         width: 100%;
         left: 0;
         position: relative;
         left: 0;
     }
-    .homeOne h1,.homeOne h2,.homeOne h3{
+
+    .homeOne h1,
+    .homeOne h2,
+    .homeOne h3 {
         left: 0;
         padding: 0 20px 0 20px;
         text-align: center;
     }
-    .homeimg{
+
+    .homeimg {
         height: 170px;
         width: 170px;
         position: absolute;
@@ -1597,59 +2654,82 @@ h1,h2,h3{
         filter: blur(6px);
         margin: 0 25% 0 25%;
     }
-    .SoMedia{
+
+    .SoMedia {
         width: 60%;
         left: 20%;
     }
-    .aboutCarts{
+
+    .aboutCarts {
         width: 80%;
         left: 10%;
     }
-    .box,.box3{
+
+    .box,
+    .box3 {
         width: 100%;
         height: max-content;
     }
-    .allBoxes{
+
+    .allBoxes {
         width: 94%;
         left: 3%;
     }
-    .contacts{
+
+    .contacts {
         width: 70%;
         left: 15%;
     }
-    .homeOne h1{
+
+    .homeOne h1 {
         font-size: 24px;
     }
-    .homeOne h2{
+
+    .homeOne h2 {
         font-size: 26px;
     }
-    .homeOne h3{
+
+    .homeOne h3 {
         font-size: 20px;
     }
-    .aboutTitle,.projectTitle,.skillsTitle,.contactTitle{
+
+    .aboutTitle,
+    .projectTitle,
+    .skillsTitle,
+    .contactTitle {
         font-size: 26px;
     }
-    .aboutDes,.projectDes,.skillsDes{
+
+    .aboutDes,
+    .projectDes,
+    .skillsDes {
         font-size: 22px;
         padding: 0 20px 0 20px;
     }
-    .cont h2{
+
+    .cont h2 {
         font-size: 18px;
     }
-    .smTitle{
+
+    .smTitle {
         font-size: 20px;
     }
-    .footerTitle{
+
+    .footerTitle {
         font-size: 26px;
     } 
-    footer ul{
+
+    footer ul {
         width: 90%;
         left: 05%;
     }
-    .box h2,.box3 h2{
+
+    .box h2,
+    .box3 h2 {
         font-size: 22px;
     }
-    .vidDiv{
+
+    .vidDiv {
         position: relative;
         top: 0px;
         left: 0;
@@ -1657,67 +2737,77 @@ h1,h2,h3{
         height: 100%;
         width: 100%;
     }
-    .video{
+
+    .video {
         width: 100%;
         height: 100%;
     }
-    .freamworks{
+
+    .freamworks {
         top: 0;
-        margin-top: -20px;
+        margin-top: -10px;
     }
-    .freamworks h3{
+
+    .freamworks h3 {
         font-size: 10px;
         margin-top: 2px;
     }
-    .Sb{
+
+    .Sb {
         height: 40px;
     }
-    .Sb svg{
+
+    .Sb svg {
         margin-top: -4px;
         height: 22px;
         width: 22px;
     }
-    .Sb  label{
+
+    .Sb label {
         margin-bottom: 10px;
         font-size: 16px;
     }
-    .vidDes{
-        font-size: 18px;
-    }
-    .aboutCart h2,.aboutCart2 h2{
+
+    .aboutCart h2,
+    .aboutCart2 h2 {
         font-size: 32px;
     }
-    .aboutCart h3,.aboutCart2 h3{
+
+    .aboutCart h3,
+    .aboutCart2 h3 {
         font-size: 20px;
     }
-    .copir{
+
+    .copir {
         padding-bottom: 16px;
         font-size: 20px;
         padding: 0 12px 12px 12px;
     }
-    .vidTitle{
+
+    .vidTitle {
         font-size: 24px;
         margin: 0;
     }
-    .vidDes,.vidDate{
+
+    .vidDes,
+    .vidDate {
         font-size: 16px;
         margin: 0;
     }
-    .vidDes{
+
+    .vidDes {
         padding: 0 3px 0 3px;
     }
-    #skillsSec{
-        top: 160%;
+
+    .cont{
+        width: 100%;
+        margin-left: 5%;
+        margin-right: 5%;
     }
 }
-@media only screen and (min-width :354px) and (max-width :384px){
-    footer ul li:hover{
-        color: white;
-    }
-    #nav ul li:hover{
-        color: white;
-    }
-    #navGitLing{
+
+@media only screen and (min-width :354px) and (max-width :384px) {
+    #navGitLing {
         text-align: center;
         padding-top: 4px;
         height: max-content;
@@ -1727,14 +2817,16 @@ h1,h2,h3{
         left: 75%;
         display: none;
     }
-    #navGitHub{
+
+    #navGitHub {
         display: block;
         color: white;
         transition: 0.4s;
         position: relative;
         top: 20px;
     }
-    #navList{
+
+    #navList {
         display: block;
         position: relative;
         top: 12px;
@@ -1745,7 +2837,8 @@ h1,h2,h3{
         cursor: pointer;
         transition: 0.4s;
     }
-    #navClose{
+
+    #navClose {
         display: none;
         position: relative;
         top: 12px;
@@ -1756,78 +2849,96 @@ h1,h2,h3{
         cursor: pointer;
         transition: 0.4s;
     }
-    #nav{
+
+    #nav {
         width: 94%;
         left: 3%;
     }
-    #nav h1{
+
+    #nav h1 {
         font-size: 20px;
         text-align: center;
         left: 25%;
         width: 50%;
     }
-    #nav ul{
+
+    #nav ul {
         left: 02%;
         top: 70px;
         display: none;
         width: 98%;
     }
-    #nav ul li{
+
+    #nav ul li {
         font-size: 18px;
     }
     
-    #header{
+    #header {
         height: 80px;
     }
-    #projectSec{
+
+    #projectSec {
         top: 250%;
     }
-    .carts{
+
+    .carts {
         width: 96%;
         left: 2%;
     }
-    .cart{
+
+    .cart {
         width: 49%;
     }
-    #contactSec{
+
+    #contactSec {
         top: 470%;
     }
-    .cont h2{
+
+    .cont h2 {
         font-size: 16px;
     }
-    footer{
+
+    footer {
         top: 517%;
         height: max-content;
     }
-    #homeSec{
+
+    #homeSec {
         width: 100%;
         overflow: hidden;
     }
-    .allHome{
+
+    .allHome {
         width: 100%;
         overflow: hidden;
         display: block;
     }
-    .homeTwo{
+
+    .homeTwo {
         width: 100%;
         left: 0;
         position: absolute;
         left: 0%;
         top: 0%;
     }
-    .homeOne{
+
+    .homeOne {
         z-index: 1;
         width: 100%;
         left: 0;
         position: relative;
         left: 0;
     }
-    .homeOne h1,.homeOne h2,.homeOne h3{
+
+    .homeOne h1,
+    .homeOne h2,
+    .homeOne h3 {
         left: 0;
         padding: 0 20px 0 20px;
         text-align: center;
     }
-    .homeimg{
+
+    .homeimg {
         height: 170px;
         width: 170px;
         position: absolute;
@@ -1836,59 +2947,82 @@ h1,h2,h3{
         filter: blur(6px);
         margin: 0 25% 0 25%;
     }
-    .SoMedia{
+
+    .SoMedia {
         width: 60%;
         left: 20%;
     }
-    .aboutCarts{
+
+    .aboutCarts {
         width: 80%;
         left: 10%;
     }
-    .box,.box3{
+
+    .box,
+    .box3 {
         width: 100%;
         height: max-content;
     }
-    .allBoxes{
+
+    .allBoxes {
         width: 94%;
         left: 3%;
     }
-    .contacts{
+
+    .contacts {
         width: 70%;
         left: 15%;
     }
-    .homeOne h1{
+
+    .homeOne h1 {
         font-size: 24px;
     }
-    .homeOne h2{
+
+    .homeOne h2 {
         font-size: 26px;
     }
-    .homeOne h3{
+
+    .homeOne h3 {
         font-size: 20px;
     }
-    .aboutTitle,.projectTitle,.skillsTitle,.contactTitle{
+
+    .aboutTitle,
+    .projectTitle,
+    .skillsTitle,
+    .contactTitle {
         font-size: 26px;
     }
-    .aboutDes,.projectDes,.skillsDes{
+
+    .aboutDes,
+    .projectDes,
+    .skillsDes {
         font-size: 22px;
         padding: 0 20px 0 20px;
     }
-    .cont h2{
+
+    .cont h2 {
         font-size: 18px;
     }
-    .smTitle{
+
+    .smTitle {
         font-size: 20px;
     }
-    .footerTitle{
+
+    .footerTitle {
         font-size: 26px;
     } 
-    footer ul{
+
+    footer ul {
         width: 90%;
         left: 05%;
     }
-    .box h2,.box3 h2{
+
+    .box h2,
+    .box3 h2 {
         font-size: 22px;
     }
-    .vidDiv{
+
+    .vidDiv {
         position: relative;
         top: 0px;
         left: 0;
@@ -1896,94 +3030,131 @@ h1,h2,h3{
         height: 100%;
         width: 100%;
     }
-    .video{
+
+    .video {
         width: 100%;
         height: 100%;
     }
-    .freamworks{
+
+    .freamworks {
         top: 0;
         margin-top: -20px;
     }
-    .freamworks h3{
+
+    .freamworks h3 {
         font-size: 10px;
         margin-top: 2px;
     }
-    .Sb{
+
+    .Sb {
         height: 40px;
     }
-    .Sb svg{
+
+    .Sb svg {
         margin-top: -4px;
         height: 22px;
         width: 22px;
     }
-    .Sb  label{
+
+    .Sb label {
         margin-bottom: 10px;
         font-size: 16px;
     }
-    .aboutCart h2,.aboutCart2 h2{
+
+    .aboutCart h2,
+    .aboutCart2 h2 {
         font-size: 32px;
     }
-    .aboutCart h3,.aboutCart2 h3{
+
+    .aboutCart h3,
+    .aboutCart2 h3 {
         font-size: 20px;
     }
-    .copir{
+
+    .copir {
         padding-bottom: 16px;
         font-size: 20px;
         padding: 0 12px 12px 12px;
     }
-    .vidTitle{
+
+    .vidTitle {
         font-size: 18px;
         margin: 0;
     }
-    .vidDes,.vidDate{
+
+    .vidDes,
+    .vidDate {
         font-size: 12px;
         margin: 0;
     }
-    .vidDes{
+
+    .vidDes {
         padding: 0 3px 0 3px;
         font-size: 12px;
     }
-    .projectTitle,.contactTitle,.skillsTitle,.aboutTitle{
+
+    .projectTitle,
+    .contactTitle,
+    .skillsTitle,
+    .aboutTitle {
         font-size: 20px;
     }
-    .aboutDes,.skillsDes,.projectDes{
+
+    .aboutDes,
+    .skillsDes,
+    .projectDes {
         font-size: 18px;
     }
-    .homeOne h1{
+
+    .homeOne h1 {
         font-size: 20px;
     }
-    .homeOne h2{
+
+    .homeOne h2 {
         font-size: 18px;
     }
-    .homeOne h3{
+
+    .homeOne h3 {
         font-size: 16px;
     }
-    .aboutCart h2,.aboutCart2 h2{
+
+    .aboutCart h2,
+    .aboutCart2 h2 {
         font-size: 28px;
     }
-    .aboutCart h3,.aboutCart2 h3{
+
+    .aboutCart h3,
+    .aboutCart2 h3 {
         font-size: 18px;
     }
-    .Sb svg{
+
+    .Sb svg {
         height: 20px;
         width: 20px;
     }
-    .SoMedia svg{
+
+    .SoMedia svg {
         height: 20px;
         width: 20px;
+    }
+
+    .box h2,
+    .box3 h2 {
+        font-size: 18px;
+        margin: 0;
+    }
+
+    .Sb svg {
+        margin: 0;
+    }
+
+    .allBoxes {
+        margin: 0;
     }
 }
-@media only screen and (min-width :320px) and (max-width :354px){
-    footer ul li:hover{
-        color: white;
-    }
-    #nav ul li:hover{
-        color: white;
-    }
-    footer ul li{
-        font-size: 16px;
-    }
-    #navGitLing{
+
+@media only screen and (min-width :284px) and (max-width :320px) {
+    #navGitLing {
         text-align: center;
         padding-top: 4px;
         height: max-content;
@@ -1993,14 +3164,16 @@ h1,h2,h3{
         left: 75%;
         display: none;
     }
-    #navGitHub{
+
+    #navGitHub {
         display: block;
         color: white;
         transition: 0.4s;
         position: relative;
         top: 20px;
     }
-    #navList{
+
+    #navList {
         display: block;
         position: relative;
         top: 12px;
@@ -2011,7 +3184,8 @@ h1,h2,h3{
         cursor: pointer;
         transition: 0.4s;
     }
-    #navClose{
+
+    #navClose {
         display: none;
         position: relative;
         top: 12px;
@@ -2022,355 +3196,98 @@ h1,h2,h3{
         cursor: pointer;
         transition: 0.4s;
     }
-    #nav{
+
+    #nav {
         width: 94%;
         left: 3%;
     }
-    #nav h1{
-        font-size: 18px;
-        text-align: center;
-        left: 25%;
-        width: 50%;
-    }
-    #nav ul{
-        left: 02%;
-        top: 70px;
-        display: none;
-        width: 98%;
-    }
-    #nav ul li{
-        font-size: 18px;
-    }
-    
-    #header{
-        height: 80px;
-    }
-    #projectSec{
-        top: 250%;
-    }
-    .carts{
-        width: 96%;
-        left: 2%;
-    }
-    .cart{
-        width: 49%;
-    }
-    #contactSec{
-        top: 480%;
-    }
-    .cont h2{
-        font-size: 16px;
-    }
-    footer{
-        top: 530%;
-        height: max-content;
-    }
-    #homeSec{
-        width: 100%;
-        overflow: hidden;
-    }
-    .allHome{
-        width: 100%;
-        overflow: hidden;
-        display: block;
-    }
-    .homeTwo{
-        width: 100%;
-        left: 0;
-        position: absolute;
-        left: 0%;
-        top: 0%;
-    }
-    .homeOne{
-        z-index: 1;
-        width: 100%;
-        left: 0;
-        position: relative;
-        left: 0;
-    }
-    .homeOne h1,.homeOne h2,.homeOne h3{
-        left: 0;
-        padding: 0 20px 0 20px;
-        text-align: center;
-    }
-    .homeimg{
-        height: 170px;
-        width: 170px;
-        position: absolute;
-        left: 6%;
-        top: 0%;
-        filter: blur(6px);
-        margin: 0 25% 0 25%;
-    }
-    .SoMedia{
-        width: 60%;
-        left: 20%;
-    }
-    .aboutCarts{
-        width: 80%;
-        left: 10%;
-    }
-    .box,.box3{
-        width: 100%;
-        height: max-content;
-    }
-    .allBoxes{
-        width: 94%;
-        left: 3%;
-    }
-    .contacts{
-        width: 70%;
-        left: 15%;
-    }
-    .homeOne h1{
-        font-size: 24px;
-    }
-    .homeOne h2{
-        font-size: 26px;
-    }
-    .homeOne h3{
-        font-size: 20px;
-    }
-    .aboutTitle,.projectTitle,.skillsTitle,.contactTitle{
-        font-size: 26px;
-    }
-    .aboutDes,.projectDes,.skillsDes{
-        font-size: 22px;
-        padding: 0 20px 0 20px;
-    }
-    .cont h2{
-        font-size: 18px;
-    }
-    .smTitle{
-        font-size: 20px;
-    }
-    .footerTitle{
-        font-size: 26px;
-    } 
-    footer ul{
-        width: 90%;
-        left: 05%;
-    }
-    .box h2,.box3 h2{
-        font-size: 22px;
-    }
-    .vidDiv{
-        position: relative;
-        top: 0px;
-        left: 0;
-        margin-top: 0;
-        height: 100%;
-        width: 100%;
-    }
-    .video{
-        width: 100%;
-        height: 100%;
-    }
-    .freamworks{
-        top: 0;
-        margin-top: -20px;
-        width: 98%;
-        left: 1%;
-    }
-    .freamworks h3{
-        font-size: 10px;
-        margin-top: 2px;
-    }
-    .Sb{
-        height: 40px;
-    }
-    .Sb svg{
-        margin-top: -4px;
-        height: 22px;
-        width: 22px;
-    }
-    .Sb  label{
-        margin-bottom: 10px;
-        font-size: 16px;
-    }
-    .aboutCart h2,.aboutCart2 h2{
-        font-size: 32px;
-    }
-    .aboutCart h3,.aboutCart2 h3{
-        font-size: 20px;
-    }
-    .copir{
-        padding-bottom: 16px;
-        font-size: 20px;
-        padding: 0 12px 12px 12px;
-    }
-    .vidTitle{
-        font-size: 18px;
-        margin: 0;
-    }
-    .vidDes,.vidDate{
-        font-size: 12px;
-        margin: 0;
-    }
-    .vidDes{
-        padding: 0 3px 0 3px;
-        font-size: 12px;
-    }
-    .projectTitle,.contactTitle,.skillsTitle,.aboutTitle{
-        font-size: 20px;
-    }
-    .aboutDes,.skillsDes,.projectDes{
-        font-size: 18px;
-    }
-    .homeOne h1{
-        font-size: 20px;
-    }
-    .homeOne h2{
-        font-size: 18px;
-    }
-    .homeOne h3{
-        font-size: 16px;
-    }
-    .aboutCart h2,.aboutCart2 h2{
-        font-size: 28px;
-    }
-    .aboutCart h3,.aboutCart2 h3{
-        font-size: 18px;
-    }
-    .Sb svg{
-        height: 20px;
-        width: 20px;
-    }
-    .SoMedia svg{
-        height: 20px;
-        width: 20px;
-    }
-    .box h2,.box3 h2{
-        font-size: 18px;
-        margin: 0;
-    }
-    .Sb svg{
-        margin: 0;
-    }
-    .allBoxes{
-        margin: 0;
-    }
-}
-@media only screen and (min-width :284px) and (max-width :320px){
-    footer ul li:hover{
-        color: white;
-    }
-    #nav ul li:hover{
-        color: white;
-    }
-    #navGitLing{
-        text-align: center;
-        padding-top: 4px;
-        height: max-content;
-        right: 0%;
-        top: 16px;
-        width: 25%;
-        left: 75%;
-        display: none;
-    }
-    #navGitHub{
-        display: block;
-        color: white;
-        transition: 0.4s;
-        position: relative;
-        top: 20px;
-    }
-    #navList{
-        display: block;
-        position: relative;
-        top: 12px;
-        left: 6px;
-        height: 40px;
-        width: 40px;
-        color: white;
-        cursor: pointer;
-        transition: 0.4s;
-    }
-    #navClose{
-        display: none;
-        position: relative;
-        top: 12px;
-        left: 6px;
-        height: 40px;
-        width: 40px;
-        color: rgb(133, 76, 230);
-        cursor: pointer;
-        transition: 0.4s;
-    }
-    #nav{
-        width: 94%;
-        left: 3%;
-    }
-    #nav h1{
+
+    #nav h1 {
         font-size: 16px;
         text-align: center;
         left: 25%;
         width: 50%;
     }
-    #nav ul{
+
+    #nav ul {
         left: 00%;
         top: 70px;
         display: none;
         width: 100%;
     }
-    #nav ul li{
+
+    #nav ul li {
         font-size: 18px;
     }
     
-    #header{
+    #header {
         height: 80px;
     }
-    #projectSec{
+
+    #projectSec {
         top: 240%;
     }
-    .carts{
+
+    .carts {
         width: 98%;
         left: 1%;
     }
-    .cart{
+
+    .cart {
         width: 49.5%;
         margin: 0;
         margin-top: 2px;
     }
-    #contactSec{
+
+    #contactSec {
         top: 470%;
     }
-    .cont h2{
+
+    .cont h2 {
         font-size: 16px;
     }
-    footer{
+
+    footer {
         top: 520%;
         height: max-content;
     }
-    #homeSec{
+
+    #homeSec {
         width: 100%;
         overflow: hidden;
     }
-    .allHome{
+
+    .allHome {
         width: 100%;
         overflow: hidden;
         display: block;
     }
-    .homeTwo{
+
+    .homeTwo {
         width: 100%;
         left: 0;
         position: absolute;
         left: 0%;
         top: 0%;
     }
-    .homeOne{
+
+    .homeOne {
         z-index: 1;
         width: 100%;
         left: 0;
         position: relative;
         left: 0;
     }
-    .homeOne h1,.homeOne h2,.homeOne h3{
+
+    .homeOne h1,
+    .homeOne h2,
+    .homeOne h3 {
         left: 0;
         padding: 0 20px 0 20px;
         text-align: center;
     }
-    .homeimg{
+
+    .homeimg {
         height: 170px;
         width: 170px;
         position: absolute;
@@ -2379,62 +3296,86 @@ h1,h2,h3{
         filter: blur(6px);
         margin: 0 25% 0 25%;
     }
-    .SoMedia{
+
+    .SoMedia {
         width: 60%;
         left: 20%;
     }
-    .aboutCarts{
+
+    .aboutCarts {
         width: 80%;
         left: 10%;
     }
-    .box,.box3{
+
+    .box,
+    .box3 {
         width: 100%;
         height: max-content;
     }
-    .allBoxes{
+
+    .allBoxes {
         width: 94%;
         left: 3%;
     }
-    .contacts{
+
+    .contacts {
         width: 90%;
         left: 05%;
     }
-    .homeOne h1{
+
+    .homeOne h1 {
         font-size: 24px;
     }
-    .homeOne h2{
+
+    .homeOne h2 {
         font-size: 26px;
     }
-    .homeOne h3{
+
+    .homeOne h3 {
         font-size: 20px;
     }
-    .aboutTitle,.projectTitle,.skillsTitle,.contactTitle{
+
+    .aboutTitle,
+    .projectTitle,
+    .skillsTitle,
+    .contactTitle {
         font-size: 26px;
     }
-    .aboutDes,.projectDes,.skillsDes{
+
+    .aboutDes,
+    .projectDes,
+    .skillsDes {
         font-size: 22px;
         padding: 0 20px 0 20px;
     }
-    .cont h2{
+
+    .cont h2 {
         font-size: 18px;
     }
-    .smTitle{
+
+    .smTitle {
         font-size: 20px;
     }
-    .footerTitle{
+
+    .footerTitle {
         font-size: 26px;
     } 
-    footer ul{
+
+    footer ul {
         width: 90%;
         left: 05%;
     }
-    footer ul li{
+
+    footer ul li {
         font-size: 16px;
     }
-    .box h2,.box3 h2{
+
+    .box h2,
+    .box3 h2 {
         font-size: 22px;
     }
-    .vidDiv{
+
+    .vidDiv {
         position: relative;
         top: 0px;
         left: 0;
@@ -2442,104 +3383,134 @@ h1,h2,h3{
         height: 100%;
         width: 100%;
     }
-    .video{
+
+    .video {
         width: 100%;
         height: 100%;
     }
-    .freamworks{
+
+    .freamworks {
         top: 0;
         margin-top: -20px;
         width: 98%;
         left: 1%;
     }
-    .freamworks h3{
+
+    .freamworks h3 {
         font-size: 10px;
         margin-top: 2px;
     }
-    .Sb{
+
+    .Sb {
         height: 34px;
         margin-top: 2px;
     }
-    .Sb svg{
+
+    .Sb svg {
         margin-top: -4px;
         height: 22px;
         width: 22px;
     }
-    .Sb  label{
+
+    .Sb label {
         margin-bottom: 10px;
         font-size: 16px;
     }
-    .aboutCart h2,.aboutCart2 h2{
+
+    .aboutCart h2,
+    .aboutCart2 h2 {
         font-size: 32px;
     }
-    .aboutCart h3,.aboutCart2 h3{
+
+    .aboutCart h3,
+    .aboutCart2 h3 {
         font-size: 20px;
     }
-    .copir{
+
+    .copir {
         padding-bottom: 16px;
         font-size: 20px;
         padding: 0 12px 12px 12px;
     }
-    .vidTitle{
+
+    .vidTitle {
         font-size: 18px;
         margin: 0;
     }
-    .vidDes,.vidDate{
+
+    .vidDes,
+    .vidDate {
         font-size: 12px;
         margin: 0;
     }
-    .vidDes{
+
+    .vidDes {
         padding: 0 3px 0 3px;
         font-size: 12px;
     }
-    .projectTitle,.contactTitle,.skillsTitle,.aboutTitle{
+
+    .projectTitle,
+    .contactTitle,
+    .skillsTitle,
+    .aboutTitle {
         font-size: 20px;
     }
-    .aboutDes,.skillsDes,.projectDes{
+
+    .aboutDes,
+    .skillsDes,
+    .projectDes {
         font-size: 18px;
     }
-    .homeOne h1{
+
+    .homeOne h1 {
         font-size: 20px;
     }
-    .homeOne h2{
+
+    .homeOne h2 {
         font-size: 18px;
     }
-    .homeOne h3{
+
+    .homeOne h3 {
         font-size: 16px;
     }
-    .aboutCart h2,.aboutCart2 h2{
+
+    .aboutCart h2,
+    .aboutCart2 h2 {
         font-size: 28px;
     }
-    .aboutCart h3,.aboutCart2 h3{
+
+    .aboutCart h3,
+    .aboutCart2 h3 {
         font-size: 18px;
     }
-    .Sb svg{
+
+    .Sb svg {
         height: 20px;
         width: 20px;
     }
-    .SoMedia svg{
+
+    .SoMedia svg {
         height: 20px;
         width: 20px;
     }
-    .box h2,.box3 h2{
+
+    .box h2,
+    .box3 h2 {
         font-size: 18px;
         margin: 0;
     }
-    .Sb svg{
+
+    .Sb svg {
         margin: 0;
     }
-    .allBoxes{
+
+    .allBoxes {
         margin: 0;
     }
 }
-@media only screen and (min-width :100px) and (max-width :284px){
-    footer ul li:hover{
-        color: white;
-    }
-    #nav ul li:hover{
-        color: white;
-    }
-    #navGitLing{
+
+@media only screen and (min-width :100px) and (max-width :284px) {
+    #navGitLing {
         text-align: center;
         padding-top: 4px;
         height: max-content;
@@ -2549,14 +3520,16 @@ h1,h2,h3{
         left: 75%;
         display: none;
     }
-    #navGitHub{
+
+    #navGitHub {
         display: block;
         color: white;
         transition: 0.4s;
         position: relative;
         top: 20px;
     }
-    #navList{
+
+    #navList {
         display: block;
         position: relative;
         top: 20px;
@@ -2567,7 +3540,8 @@ h1,h2,h3{
         cursor: pointer;
         transition: 0.4s;
     }
-    #navClose{
+
+    #navClose {
         display: none;
         position: relative;
         top: 20px;
@@ -2578,82 +3552,99 @@ h1,h2,h3{
         cursor: pointer;
         transition: 0.4s;
     }
-    #nav{
+
+    #nav {
         width: 94%;
         left: 3%;
     }
-    #nav h1{
+
+    #nav h1 {
         font-size: 14px;
         text-align: center;
         left: 25%;
         width: 50%;
         top: 30px;
     }
-    #nav ul{
+
+    #nav ul {
         left: 00%;
         top: 70px;
         display: none;
         width: 100%;
         flex-wrap: wrap;
     }
-    #nav ul li{
+
+    #nav ul li {
         font-size: 18px;
         width: 30%;
         text-align: center;
     }
     
-    #header{
+    #header {
         height: 80px;
     }
-    #projectSec{
+
+    #projectSec {
         top: 260%;
     }
-    .carts{
+
+    .carts {
         width: 98%;
         left: 1%;
     }
-    .cart{
+
+    .cart {
         width: 80%;
         left: 10%;
         margin: 0;
         margin-top: 2px;
     }
-    #contactSec{
+
+    #contactSec {
         top: 610%;
     }
-    footer{
+
+    footer {
         top: 670%;
         height: max-content;
     }
-    #homeSec{
+
+    #homeSec {
         width: 100%;
         overflow: hidden;
     }
-    .allHome{
+
+    .allHome {
         width: 100%;
         overflow: hidden;
         display: block;
     }
-    .homeTwo{
+
+    .homeTwo {
         width: 100%;
         left: 0;
         position: absolute;
         left: 0%;
         top: 0%;
     }
-    .homeOne{
+
+    .homeOne {
         z-index: 1;
         width: 100%;
         left: 0;
         position: relative;
         left: 0;
     }
-    .homeOne h1,.homeOne h2,.homeOne h3{
+
+    .homeOne h1,
+    .homeOne h2,
+    .homeOne h3 {
         left: 0;
         padding: 0 20px 0 20px;
         text-align: center;
     }
-    .homeimg{
+
+    .homeimg {
         height: 170px;
         width: 170px;
         position: absolute;
@@ -2662,63 +3653,88 @@ h1,h2,h3{
         filter: blur(6px);
         margin: 0 25% 0 25%;
     }
-    .SoMedia{
+
+    .SoMedia {
         width: 60%;
         left: 20%;
     }
-    .aboutCarts{
+
+    .aboutCarts {
         width: 80%;
         left: 10%;
     }
-    .box,.box3{
+
+    .box,
+    .box3 {
         width: 100%;
         height: max-content;
+        overflow: hidden;
     }
-    .allBoxes{
+
+    .allBoxes {
         width: 94%;
         left: 3%;
     }
-    .contacts{
+
+    .contacts {
         width: 90%;
         left: 05%;
     }
-    .homeOne h1{
+
+    .homeOne h1 {
         font-size: 24px;
     }
-    .homeOne h2{
+
+    .homeOne h2 {
         font-size: 26px;
     }
-    .homeOne h3{
+
+    .homeOne h3 {
         font-size: 20px;
     }
-    .aboutTitle,.projectTitle,.skillsTitle,.contactTitle{
+
+    .aboutTitle,
+    .projectTitle,
+    .skillsTitle,
+    .contactTitle {
         font-size: 26px;
     }
-    .aboutDes,.projectDes,.skillsDes{
+
+    .aboutDes,
+    .projectDes,
+    .skillsDes {
         font-size: 22px;
         padding: 0 20px 0 20px;
     }
-    .cont h2{
+
+    .cont h2 {
         font-size: 14px;
         margin-top: 8px;
     }
-    .smTitle{
+
+    .smTitle {
         font-size: 20px;
     }
-    .footerTitle{
+
+    .footerTitle {
         font-size: 26px;
     } 
-    footer ul{
+
+    footer ul {
         width: 90%;
         left: 05%;
     }
-    footer ul li{
+
+    footer ul li {
         font-size: 16px;
     }
-    .box h2,.box3 h2{
+
+    .box h2,
+    .box3 h2 {
         font-size: 22px;
     }
-    .vidDiv{
+
+    .vidDiv {
         position: relative;
         top: 0px;
         left: 0;
@@ -2726,149 +3742,434 @@ h1,h2,h3{
         height: 100%;
         width: 100%;
     }
-    .video{
+
+    .video {
         width: 100%;
         height: 100%;
     }
-    .freamworks{
+
+    .freamworks {
         top: 0;
         margin-top: -20px;
         width: 98%;
         left: 1%;
     }
-    .freamworks h3{
+
+    .freamworks h3 {
         font-size: 10px;
         margin-top: 2px;
     }
-    .Sb{
+
+    .Sb {
         height: 34px;
         margin-top: 2px;
     }
-    .Sb svg{
+
+    .Sb svg {
         margin-top: -4px;
         height: 22px;
         width: 22px;
     }
-    .Sb  label{
+
+    .Sb label {
         margin-bottom: 10px;
         font-size: 16px;
     }
-    .aboutCart h2,.aboutCart2 h2{
+
+    .aboutCart h2,
+    .aboutCart2 h2 {
         font-size: 32px;
     }
-    .aboutCart h3,.aboutCart2 h3{
+
+    .aboutCart h3,
+    .aboutCart2 h3 {
         font-size: 20px;
     }
-    .copir{
+
+    .copir {
         padding-bottom: 16px;
         font-size: 20px;
         padding: 0 12px 12px 12px;
     }
-    .vidTitle{
+
+    .vidTitle {
         font-size: 18px;
         margin: 0;
     }
-    .vidDes,.vidDate{
+
+    .vidDes,
+    .vidDate {
         font-size: 12px;
         margin: 0;
     }
-    .vidDes{
+
+    .vidDes {
         padding: 0 3px 0 3px;
         font-size: 12px;
     }
-    .projectTitle,.contactTitle,.skillsTitle,.aboutTitle{
+
+    .projectTitle,
+    .contactTitle,
+    .skillsTitle,
+    .aboutTitle {
         font-size: 20px;
     }
-    .aboutDes,.skillsDes,.projectDes{
+
+    .aboutDes,
+    .skillsDes,
+    .projectDes {
         font-size: 18px;
     }
-    .homeOne h1{
+
+    .homeOne h1 {
         font-size: 20px;
     }
-    .homeOne h2{
+
+    .homeOne h2 {
         font-size: 18px;
     }
-    .homeOne h3{
+
+    .homeOne h3 {
         font-size: 16px;
     }
-    .aboutCart h2,.aboutCart2 h2{
+
+    .aboutCart h2,
+    .aboutCart2 h2 {
         font-size: 28px;
     }
-    .aboutCart h3,.aboutCart2 h3{
+
+    .aboutCart h3,
+    .aboutCart2 h3 {
         font-size: 18px;
     }
-    .Sb svg{
+
+    .Sb svg {
         height: 20px;
         width: 20px;
     }
-    .SoMedia svg{
+
+    .SoMedia svg {
         height: 20px;
         width: 20px;
     }
-    .box h2,.box3 h2{
+
+    .box h2,
+    .box3 h2 {
         font-size: 18px;
         margin: 0;
     }
-    .Sb svg{
+
+    .Sb svg {
         margin: 0;
     }
-    .allBoxes{
+
+    .allBoxes {
         margin: 0;
     }
-    .cont svg{
+
+    #contSvg {
         height: 25px;
         width: 25px;
 
     }
 }
-@media only screen and (min-width :390px) and (max-width :420px){
-    #contactSec{
-        top: 610%;
-    }
-    .cont h2{
-        font-size: 16px;
-    }
-    footer{
-        top: 670%;
-        height: max-content;
-    }
-    #skillsSec{
-        top: 160%;
-    }
-    #projectSec{
-        top: 300%;
-    }
-}
 
-#homeSec,#abourSec, #projectSec, #skillsSec, #contactSec{
-    position: relative;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: max-content;
-    overflow: hidden;
-    height: max-content;
-    margin: 0;
-    padding: 0;
-}
+/* Rings Section Styles */
+.rings {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            margin-top: 60px;
+        }
 
-#projectSec, #skillsSec{
-    position: relative;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: max-content;
-    overflow: hidden;
-    height: max-content;
-    margin-bottom: 40px;
-    padding-bottom: 40px;
-}
+        .ring-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .ring {
+            width: 90px;
+            height: 90px;
+            transform: rotate(-90deg);
+            transition: transform 0.3s ease;
+    padding: 4px;
+        }
+
+        .ring:hover {
+            transform: rotate(-90deg) scale(1.05);
+        }
+
+        .ring-bg {
+            stroke: rgba(255, 255, 255, 0.2);
+    stroke-width: 3
+        }
+
+        .ring-progress {
+            stroke: rgb(133, 76, 230);
+    stroke-width: 4;
+            stroke-linecap: round;
+            transition: stroke-dasharray 2s ease-in-out;
+        }
+
+        .ring-percent {
+            fill: white;
+    font-size: 10px;
+            font-weight: bold;
+            transform: rotate(90deg);
+            transform-origin: center;
+        }
+
+        .ring-label {
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            margin-top: 15px;
+            text-align: center;
+            min-height: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .rings {
+                gap: 30px;
+            }
+            
+            .ring {
+                width: 90px;
+                height: 90px;
+            }
+            
+            .ring-percent {
+                font-size: 7px;
+            }
+            
+            .ring-label {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .rings {
+                gap: 25px;
+                flex-direction: column;
+            }
+            
+            .ring {
+                width: 90px;
+                height: 90px;
+            }
+            
+            .ring-bg,
+            .ring-progress {
+                stroke-width: 4;
+            }
+            
+            .ring-percent {
+                font-size: 8px;
+            }
+            
+            .ring-label {
+                font-size: 12px;
+                margin-top: 10px;
+            }
+        }
+
+        /* Animation */
+        @keyframes ringAnimation {
+            from {
+                stroke-dasharray: 0 100;
+            }
+        }
+
+        .ring-progress {
+            animation: ringAnimation 2s ease-in-out;
+        }
+
+        /* Additional styling for better visual */
+        .page-title {
+            text-align: center;
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            font-weight: 300;
+        }
+
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2rem;
+                margin-bottom: 40px;
+            }
+        }
 /*
-footer{
+        .copy-icon {
+            position: relative;
+    height: 40px;
+    width: 40px;
+    top: 06px;
+    left: 90%;
+            color: #666;
+            cursor: pointer;
+            padding: 6px;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+*/
+
+.copy-icon {
     position: absolute;
-    top: 0px;
-    left: 0%;
+    top: 20%;
+    left: 90%;
+    /*transform: translateY(-50%);*/
+    
+    height: 35px;
+    width: 35px;
+    color: rgb(133, 76, 230);
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 4px;
+    transition: all 0.2s;
+    background: none;
+    z-index: 2;
+        }
+        
+        .copy-icon:hover {
+            background-color: #e0e0e0;
+        }
+        
+        .copy-icon.copied {
+            background-color: #4caf50;
+            color: white !important;
+        }
+        
+        .success-message {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 16px;
+            border-radius: 4px;
+            display: none;
+            z-index: 1000;
+        }
+/*
+.allboxes::before{
+    content: '';
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: max-content;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.allboxes::after{
+    content: '';
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+*/
+.box::before,
+.box3::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            background: conic-gradient(from 0deg, 
+            #00bcd4 0deg,
+            /* سماوي */
+            #2196f3 90deg,
+            /* أزرق */
+            #9c27b0 180deg,
+            /* بنفسجي */
+            #e91e63 270deg,
+            /* وردي */
+            #00bcd4 360deg
+            /* عودة للسماوي */
+            );
+            border-radius: 20px;
+            animation: rotate 6s linear infinite;
+            z-index: -1;
+            padding: 2px;
+            overflow: hidden;
+        }
+
+.box::after,
+.box3::after {
+            content: '';
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            right: 1px;
+            bottom: 1px;
+            background-color: rgb(12, 11, 11);
+            z-index: -1;
+            overflow: hidden;
+        }
+
+#successMessage{
+    transition: 0.3s;
+    background-color: rgb(133, 76, 230);
+    color: white;
+    position: relative;
+    width: 10%;
+    text-align: center;
+    left: 45%;
+    top: 100px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.success-message{
+    background-color: #00bcd4;
+    color: white;
+}
+.copy-icon.copied{
+    background: linear-gradient(45deg,
+            rgba(133, 76, 230, 0.9),
+            rgba(24, 136, 240, 0.9)) border-box;
+    color: white;
+}
+
+.vidDiv {
+    width: 100%;
+    height: 180px;
+    margin-bottom: 10px;
+    padding-right:0px;
+    position: relative;
+    left:0px;
+    border-radius: 12px;
     overflow: hidden;
-}*/
+    background: #181a1b00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    margin: 0;
+    display: block;
+    background: #181a1b;
+        }
+
+        .cont{
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-top-right-radius: 00px;
+            border-bottom-left-radius: 00px;
+        }
