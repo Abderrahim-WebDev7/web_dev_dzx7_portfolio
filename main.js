@@ -12,8 +12,10 @@ upArrow.onclick = function(){
 window.onscroll = function(){
     if(window.scrollY >= 10){
         header.style.borderColor = '#b800cc';
+        header.style.backgroundColor = '#000000';
     }else{
-        header.style.borderColor = '#181a1b';
+        header.style.borderColor = '';
+        header.style.backgroundColor = '#00000000';
     }
     if(window.scrollY >= 800){
         upArrow.style.display = 'block';
@@ -140,6 +142,14 @@ document.getElementById('home').addEventListener('click', function() {
     skillsSec.style.display = 'none';
     projectSec.style.display = 'none';
     contactSec.style.display = 'none';
+    
+    // إزالة active من كل العناصر
+    document.querySelectorAll('#navUL li').forEach(item => {
+        item.classList.remove('active');
+    });
+    // إضافة active على العنصر المضغوط
+    this.classList.add('active');
+    
     if(window.width <= 744 && window.width >= 390){
         navClose.style.display = 'none';
         navList.style.display = 'block';
@@ -164,6 +174,14 @@ document.getElementById('about').addEventListener('click', function() {
     skillsSec.style.display = 'none';
     projectSec.style.display = 'none';
     contactSec.style.display = 'none';
+    
+    // إزالة active من كل العناصر
+    document.querySelectorAll('#navUL li').forEach(item => {
+        item.classList.remove('active');
+    });
+    // إضافة active على العنصر المضغوط
+    this.classList.add('active');
+    
     if(window.width <= 744 && window.width >= 390){
         navClose.style.display = 'none';
         navList.style.display = 'block';
@@ -188,6 +206,14 @@ document.getElementById('skills').addEventListener('click', function() {
     skillsSec.style.display = 'block';
     projectSec.style.display = 'none';
     contactSec.style.display = 'none';
+    
+    // إزالة active من كل العناصر
+    document.querySelectorAll('#navUL li').forEach(item => {
+        item.classList.remove('active');
+    });
+    // إضافة active على العنصر المضغوط
+    this.classList.add('active');
+    
     if(window.width <= 744 && window.width >= 390){
         navClose.style.display = 'none';
         navList.style.display = 'block';
@@ -212,6 +238,14 @@ document.getElementById('projects').addEventListener('click', function() {
     skillsSec.style.display = 'none';
     projectSec.style.display = 'block';
     contactSec.style.display = 'none';
+    
+    // إزالة active من كل العناصر
+    document.querySelectorAll('#navUL li').forEach(item => {
+        item.classList.remove('active');
+    });
+    // إضافة active على العنصر المضغوط
+    this.classList.add('active');
+    
     if(window.width <= 744 && window.width >= 390){
         navClose.style.display = 'none';
         navList.style.display = 'block';
@@ -236,6 +270,14 @@ document.getElementById('contact').addEventListener('click', function() {
     skillsSec.style.display = 'none';
     projectSec.style.display = 'none';
     contactSec.style.display = 'block';
+    
+    // إزالة active من كل العناصر
+    document.querySelectorAll('#navUL li').forEach(item => {
+        item.classList.remove('active');
+    });
+    // إضافة active على العنصر المضغوط
+    this.classList.add('active');
+    
     if(window.width <= 744 && window.width >= 390){
         navClose.style.display = 'none';
         navList.style.display = 'block';
@@ -294,4 +336,83 @@ document.getElementById('contact2').addEventListener('click', function() {
     contactSec.style.display = 'block';
 });
 */
+
+// تأثير الكتابة المتحركة
+const typingText = document.querySelector('.typing-text');
+const texts = ['full stack dev', 'web app dev'];
+let textIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function typeWriter() {
+    const currentText = texts[textIndex];
+    
+    if (isDeleting) {
+        // حذف الحروف
+        typingText.textContent = currentText.substring(0, charIndex - 1);
+        charIndex--;
+    } else {
+        // كتابة الحروف
+        typingText.textContent = currentText.substring(0, charIndex + 1);
+        charIndex++;
+    }
+    
+    let typeSpeed = 100;
+    
+    if (isDeleting) {
+        typeSpeed = 50; // سرعة الحذف
+    }
+    
+    if (!isDeleting && charIndex === currentText.length) {
+        // انتظار قبل الحذف
+        typeSpeed = 2000;
+        isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+        // الانتقال للنص التالي
+        isDeleting = false;
+        textIndex = (textIndex + 1) % texts.length;
+        typeSpeed = 500;
+    }
+    
+    setTimeout(typeWriter, typeSpeed);
+}
+
+// بدء التأثير عند تحميل الصفحة
+window.addEventListener('load', () => {
+    setTimeout(typeWriter, 1000);
+    // جعل العنصر home نشطاً افتراضياً
+    document.getElementById('home').classList.add('active');
+});
+/*
+const navItems = document.querySelectorAll("#navUL li");
+
+navItems.forEach(item => {
+    item.addEventListener("click", () => {
+        // إزالة active من كل العناصر
+        navItems.forEach(i => i.classList.remove("active"));
+        // إضافة active على العنصر المضغوط
+        item.classList.add("active");
+        // الانتقال للسطر المطلوب
+        document.getElementById(item.id + "Sec")?.scrollIntoView({ behavior: "smooth" });
+    });
+});*/
+
+
+function showSuccessMessage() {
+    const msg = document.getElementById('successMessage');
+    if (!msg) return;
+    msg.style.display = 'block';
+    setTimeout(() => {
+        msg.style.display = 'none';
+    }, 3000);
+}
+
+// مثال: استدعِ showSuccessMessage بعد نجاح النسخ
+function copyToClipboard(svgElement, text) {
+    navigator.clipboard.writeText(text).then(() => {
+        svgElement.classList.add('copied');
+        showSuccessMessage();
+        setTimeout(() => svgElement.classList.remove('copied'), 1500);
+    });
+}
 
