@@ -110,18 +110,18 @@ function smoothScroll(targetId, offset = 0) {
 }
 
 let homeSec = document.getElementById('homeSec');
-let abourSec = document.getElementById('abourSec');
+let aboutSec = document.getElementById('aboutSec');
 let skillsSec = document.getElementById('skillsSec');
 let projectSec = document.getElementById('projectSec');
 let contactSec = document.getElementById('contactSec');
 
-abourSec.style.display = 'none';
+aboutSec.style.display = 'none';
 skillsSec.style.display = 'none';
 projectSec.style.display = 'none';
 contactSec.style.display = 'none';
 
 homeSec.style.top = '80px';
-abourSec.style.top = '140px';
+aboutSec.style.top = '140px';
 skillsSec.style.top = '140px';
 projectSec.style.top = '140px';
 contactSec.style.top = '220px';
@@ -138,7 +138,7 @@ projectSec.style.paddingBottom = '40px';
 document.getElementById('home').addEventListener('click', function() {
     //smoothScroll('homeSec');
     homeSec.style.display = 'block';
-    abourSec.style.display = 'none';
+    aboutSec.style.display = 'none';
     skillsSec.style.display = 'none';
     projectSec.style.display = 'none';
     contactSec.style.display = 'none';
@@ -170,7 +170,7 @@ document.getElementById('about').addEventListener('click', function() {
     //navUL.style.display = 'none';
     //header.style.height = '80px';
     homeSec.style.display = 'none';
-    abourSec.style.display = 'block';
+    aboutSec.style.display = 'block';
     skillsSec.style.display = 'none';
     projectSec.style.display = 'none';
     contactSec.style.display = 'none';
@@ -202,7 +202,7 @@ document.getElementById('skills').addEventListener('click', function() {
     //navUL.style.display = 'none';
     //header.style.height = '80px';
     homeSec.style.display = 'none';
-    abourSec.style.display = 'none';
+    aboutSec.style.display = 'none';
     skillsSec.style.display = 'block';
     projectSec.style.display = 'none';
     contactSec.style.display = 'none';
@@ -234,7 +234,7 @@ document.getElementById('projects').addEventListener('click', function() {
     //navUL.style.display = 'none';
     //header.style.height = '80px';
     homeSec.style.display = 'none';
-    abourSec.style.display = 'none';
+    aboutSec.style.display = 'none';
     skillsSec.style.display = 'none';
     projectSec.style.display = 'block';
     contactSec.style.display = 'none';
@@ -266,7 +266,7 @@ document.getElementById('contact').addEventListener('click', function() {
     //navUL.style.display = 'none';
     //header.style.height = '80px';
     homeSec.style.display = 'none';
-    abourSec.style.display = 'none';
+    aboutSec.style.display = 'none';
     skillsSec.style.display = 'none';
     projectSec.style.display = 'none';
     contactSec.style.display = 'block';
@@ -381,7 +381,7 @@ function typeWriter() {
 window.addEventListener('load', () => {
     setTimeout(typeWriter, 1000);
     // جعل العنصر home نشطاً افتراضياً
-    document.getElementById('home').classList.add('active');
+    //document.getElementById('home').classList.add('active');
 });
 /*
 const navItems = document.querySelectorAll("#navUL li");
@@ -416,3 +416,63 @@ function copyToClipboard(svgElement, text) {
     });
 }
 
+
+navList.style.display = 'none';
+navClose.style.display = 'none';
+
+let home2 = document.getElementById('home2');
+let about2 = document.getElementById('about2');
+let skills2 = document.getElementById('skills2');
+let project2 = document.getElementById('project2');
+let contact2 = document.getElementById('contact2');
+
+// ربط footerNav بنفس وظائف التنقل للشاشات الصغيرة
+function setupFooterNav() {
+    const footerNavItems = document.querySelectorAll('#footerNav li');
+    
+    footerNavItems.forEach(item => {
+        item.addEventListener('click', function() {
+            // إزالة active من كل العناصر في كلا الشريطين
+            document.querySelectorAll('#navUL li, #footerNav li').forEach(li => {
+                li.classList.remove('active');
+            });
+            
+            // إضافة active على العنصر المضغوط في كلا الشريطين
+            this.classList.add('active');
+            const correspondingNavItem = document.querySelector(`#navUL #${this.id}`);
+            if (correspondingNavItem) {
+                correspondingNavItem.classList.add('active');
+            }
+            
+            // تنفيذ نفس منطق التنقل
+            const sectionId = this.id + 'Sec';
+            const targetSection = document.getElementById(sectionId);
+            
+            if (targetSection) {
+                // إخفاء جميع الأقسام
+                document.querySelectorAll('section[id$="Sec"]').forEach(sec => {
+                    sec.style.display = 'none';
+                });
+                
+                // إظهار القسم المطلوب
+                targetSection.style.display = 'block';
+            }
+        });
+    });
+}
+
+// تهيئة footerNav عند تحميل الصفحة
+document.addEventListener('DOMContentLoaded', setupFooterNav);
+/*
+let about = document.getElementById('about');
+about.onclick = function(){
+    aboutSec.style.display = 'block';
+    homeSec.style.display = 'none';
+    skillsSec.style.display = 'none';
+    projectSec.style.display = 'none';
+    contactSec.style.display = 'none';
+}*/
+navClose.style.display = 'none';
+navList.style.display = 'none';
+let menuDv = document.getElementById('menuDv');
+menuDv.style.display = 'none';
