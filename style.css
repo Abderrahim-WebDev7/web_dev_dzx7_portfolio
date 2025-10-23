@@ -247,7 +247,7 @@ nav ul li {
 nav ul li:hover {
     color: rgb(133, 76, 230);
 }
-
+/*
 nav ul li::after {
     content: '';
     position: absolute;
@@ -257,7 +257,7 @@ nav ul li::after {
     width: 0%;
     background-color: rgb(133, 76, 230);
     transition: width 0.3s ease;
-}
+}*/
 
 nav ul li.active {
     color: rgb(133, 76, 230);
@@ -573,10 +573,11 @@ nav ul li.active::after {
 
 
 
-#abourSec {
+#aboutSec {
     width: 100%;
     position: absolute;
     top: 80%;
+    padding-bottom: 80px;
 }
 
 .aboutTitle {
@@ -876,6 +877,7 @@ nav ul li.active::after {
     width: 100%;
     position: absolute;
     top: 140%;
+    margin-bottom: 60px;
 }
 
 .skillsTitle {
@@ -1661,6 +1663,85 @@ h3 {
     }
 }
 
+@media only screen and (min-width :200px) and (max-width: 744px) {
+    #navList {
+        display: none;
+    }
+
+    #navClose {
+        display: none;
+    }
+    #nav ul {
+        display: none;
+    }
+    #nav h1 {
+        font-size: 22px;
+        text-align: center;
+        left: 5%;
+        width: max-content;
+    }
+    #footerNav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #000000;
+        border-top: 1px solid #333;
+        padding: 10px 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #footerNav ul {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        max-width: 400px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    #footerNav li {
+        margin: 0 10px;
+    }
+    
+    #footerNav svg {
+        width: 24px;
+        height: 24px;
+        color: white;
+        transition: all 0.3s ease;
+    }
+    
+    #footerNav li:hover svg {
+        color: rgb(133, 76, 230);
+        transform: scale(1.1);
+    }
+    
+    #footerNav li.active svg {
+        color: rgb(133, 76, 230);
+        transform: scale(1.2);
+    }
+}
+
+/* إخفاء footerNav للشاشات الكبيرة */
+@media (min-width: 745px) {
+    #footerNav {
+        display: none;
+    }
+    .aboutCarts{
+        width: 80%;
+        left: 10%;
+    }
+    .rings{
+        width: 50%;
+        left: 25%;
+    }
+}
+
+
 @media only screen and (min-width :669px) and (max-width :744px) {
     #navGitLing {
         text-align: center;
@@ -1712,6 +1793,7 @@ h3 {
     #nav {
         width: 94%;
         left: 3%;
+
     }
 
     #nav h1 {
@@ -1725,8 +1807,18 @@ h3 {
         left: 15%;
         top: 70px;
         display: none;
+        position: absolute;
+        top: 100%;
         width: 70%;
     }
+
+    #footerNav{
+        display: flex;
+        width: 100%;
+    }
+    
+    /* إظهار footerNav في أسفل الصفحة تماماً للشاشات الصغيرة */
+    
 
     #nav ul li {
         font-size: 20px;
@@ -3509,7 +3601,41 @@ h3 {
     }
 }
 
+@media only screen and (min-width :100px) and (max-width :529px) {
+    #projectSec {
+        top: 80px;
+        margin-bottom: 40px;
+    }
+    
+    #skillsSec {
+        top: 80px;
+        margin-bottom: 40px;
+    }
+    #nav h1{
+        left: 0%;
+        top: 24px;
+    }
+    #navGitHub{
+        right: 5%;
+    }
+    #skillsSec, #projectSec{
+        top: 60px;
+        padding-bottom: 80px;
+    }
+}
+
 @media only screen and (min-width :100px) and (max-width :284px) {
+    #nav h1{
+        left: 0%;
+        top: 24px;
+    }
+    #navGitHub{
+        right: 5%;
+    }
+    #skillsSec, #projectSec{
+        top: 60px;
+        padding-bottom: 80px;
+    }
     #navGitLing {
         text-align: center;
         padding-top: 4px;
@@ -4050,13 +4176,15 @@ h3 {
         .success-message {
             position: fixed;
             top: 20px;
-            right: 20px;
+            right: 00px;
             background-color: #4caf50;
             color: white;
-            padding: 10px 16px;
-            border-radius: 4px;
+            padding: 00px 00px;
+            border-radius: 0px;
             display: none;
             z-index: 1000;
+            width: 100%;
+            text-align: center;
         }
 /*
 .allboxes::before{
@@ -4122,13 +4250,14 @@ h3 {
 
 #successMessage{
     transition: 0.3s;
-    background-color: rgb(133, 76, 230);
+    background-color: rgba(132, 76, 230, 0);
     color: white;
     position: relative;
-    width: 10%;
+    width: 100%;
     text-align: center;
-    left: 45%;
+    left: 0%;
     top: 100px;
+    text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .success-message{
@@ -4173,7 +4302,90 @@ iframe {
             border-top-right-radius: 00px;
             border-bottom-left-radius: 00px;
         }
-.success-message{
-    background-color: rgba(255, 255, 255, 0);
-}
+
+        nav ul li svg{
+            height: 30px;
+            width: 30px;
+            color: white;
+            position: relative;
+            top: 2px;
+            left: 2px;
+            z-index: 999;
+            transition: all 0.3s ease;
+        }
+        
+        /* تأثير التحويم - تكبير SVG */
+        nav ul li:hover svg{
+            transform: scale(1.1);
+            color: rgb(133, 76, 230);
+        }
+        
+        /* تأثير النقر - تلوين بنفسجي مع gradient */
+        nav ul li.active svg{
+            color: rgb(118, 63, 212);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            transform: scale(1.2);
+            filter: drop-shadow(0 0 12px rgba(133, 76, 230, 0.8));
+        }
+        
+        /* تأثير التحويم مع النشط */
+        nav ul li.active:hover svg{
+            transform: scale(1.3);
+            filter: drop-shadow(0 0 12px rgba(133, 76, 230, 0.8));
+        }
+        .aboutCart {
+            width: 40%;
+            left: 00%;
+        }
+        .aboutCart2 {
+            width: 40%;
+            left: 00%;
+        }
+        .aboutCartsTwo,.aboutCartsOne{
+            display: flex;
+            justify-content: space-around;
+            left: 00%;
+            width: 100%;
+        }
+        .rings{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            align-content: center;
+            flex-wrap: nowrap;
+            flex-direction:row;
+            width: 80%;
+            left: 10%;
+        }
+        #skillsSec, #pojectSec {
+            padding-bottom: 80px;
+            top: 0;
+        }
+        @media only screen and (min-width :100px) and (max-width :529px) {
+            .carts {
+                margin-bottom: 10%;
+            }
+            
+            .allBoxes {
+                margin-bottom: 10%;
+            }
+            
+        }
+        
+        @media only screen and (min-width :100px) and (max-width :284px) {
+            .carts {
+                margin-bottom: 10%;
+            }
+            
+            .allBoxes {
+                margin-bottom: 10%;
+            }
+            
+        }
+        
+        #menuDv, #navList, #navClose{
+            display: none;
+        }
 
